@@ -24,3 +24,23 @@ footer {
   color: var(--text);
   box-shadow: 0 2px 4px var(--shadow);
 }
+
+footer {
+  box-shadow: 0 -2px 4px var(--shadow); // ombre vers le haut
+}
+
+.btn {
+  background-color: var(--accent);
+  color: vars.$text-light;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 16px;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+}
