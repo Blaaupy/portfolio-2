@@ -1,0 +1,101 @@
+.parcours-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: var(--background);
+  color: var(--text-light);
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 3px;
+      height: 100%;
+      background: rgba(0, 188, 201, 0.3); // ou utiliser var(--accent) avec rgba hack
+      transform: translateX(-50%);
+      border-radius: 3px;
+    }
+
+    .timeline-item {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(6px);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      width: 80%;
+      max-width: 600px;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+
+      opacity: 0;
+      transform: translateY(30px);
+
+      &.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 188, 201, 0.2); // ou rgba(var(--accent))
+      }
+
+      .timeline-icon {
+        background: var(--accent);
+        color: var(--background);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        box-shadow: 0 0 10px rgba(0, 188, 201, 0.4);
+      }
+
+      .timeline-content {
+        text-align: left;
+        h3 {
+          margin: 0;
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+        .timeline-subtitle {
+          font-size: 0.9rem;
+          opacity: 0.8;
+        }
+        p {
+          margin-top: 0.5rem;
+          font-size: 0.95rem;
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}

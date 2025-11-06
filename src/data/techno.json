@@ -1,0 +1,10 @@
+[
+  { "name": "React", "color": "#61dafb", "level": 85, "icon": "/src/assets/images/Logos/React-icon.svg" },
+  { "name": "JavaScript", "color": "#f7df1e", "level": 90, "icon": "/src/assets/images/Logos/Javascript-shield.svg" },
+  { "name": "Node.js", "color": "#3c873a", "level": 70, "icon": "/src/assets/images/Logos/Node.js_logo.svg" },
+  { "name": "Sass", "color": "#cc6699", "level": 80, "icon": "/src/assets/images/Logos/Sass_Logo_Color.svg" },
+  { "name": "HTML5", "color": "#e34f26", "level": 95, "icon": "/src/assets/images/Logos/HTML5_logo_and_wordmark.svg" },
+  { "name": "CSS3", "color": "#1572b6", "level": 90, "icon": "/src/assets/images/Logos/CSS3_logo.svg" },
+  { "name": "Git", "color": "#f34f29", "level": 75, "icon": "/src/assets/images/Logos/Git-logo.svg" },
+  { "name": "Figma", "color": "#a259ff", "level": 80, "icon": "/src/assets/images/Logos/Figma Icon (Full-color).svg" }
+]

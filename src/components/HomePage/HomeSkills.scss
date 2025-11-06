@@ -1,0 +1,36 @@
+@use "../../styles/variables.scss" as vars;
+
+.home-skills {
+  padding: 0 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+
+  .skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+
+    li {
+      background-color: var(--accent);
+      color: vars.$text-light;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@use "../../styles/variables.scss" as vars;
+
+.home-about {
+  position: relative;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--background-alt, var(--background));
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/textures/paper-texture.png") repeat;
+    opacity: 0.05;
+    pointer-events: none;
+  }
+
+  h2 {
+    font-family: "Merriweather", serif;
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text);
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .btn {
+    background-color: var(--accent);
+    color: vars.$text-light;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  // Animation fade-in
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

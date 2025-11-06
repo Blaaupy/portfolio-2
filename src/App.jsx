@@ -14,7 +14,7 @@ function App() {
       <ThemeProvider>
         <Router>
           <Header />
-          <main className="page-container">
+          <main>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

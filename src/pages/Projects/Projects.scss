@@ -1,0 +1,38 @@
+@use "../../styles/variables" as *;
+
+.projects-page {
+    
+  h1 {
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  p {
+    text-align: center;
+  }
+
+  .project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--text);
+      opacity: 0.9;
+    }
+  }
+}

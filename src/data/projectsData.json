@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Portfolio React",
+    "descriptionShort": "Création d’un portfolio moderne en React avec animations fluides et multilingue.",
+    "image": "/images/projects/portfolio-react.jpg"
+  },
+  {
+    "id": 2,
+    "title": "ScanWatcher",
+    "descriptionShort": "Outil Node.js automatisant la veille de sorties de webtoons avec Puppeteer et Discord.",
+    "image": "/images/projects/scanwatcher.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Bee Swarm Optimizer",
+    "descriptionShort": "Script d’optimisation de ruche pour Bee Swarm Simulator, intégrant statistiques et conseils.",
+    "image": "/images/projects/beeswarm.jpg"
+  }
+]

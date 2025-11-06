@@ -1,0 +1,124 @@
+@use "../../styles/variables.scss" as vars;
+
+.about-skills {
+  text-align: center;
+
+  h2 {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+  }
+
+  .skills-intro {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    color: var(--text);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: start;
+  }
+
+  .skill-card {
+    background: var(--background-alt);
+    border-radius: 20px;
+    padding: 1rem;
+    width: 160px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    gap: 0.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, var(--skill-color) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+    }
+
+    .skill-circle {
+      width: 70px;
+      height: 70px;
+      z-index: 1;
+    }
+
+    .skill-icon-div {
+      max-width: 40px;
+      max-height: 40px;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    .skill-icon {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      z-index: 1;
+      text-align: center;
+      margin-top: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-button {
+      position: absolute;
+      bottom: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      background: var(--accent);
+      color: vars.$text-light;
+      border: none;
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    &:hover {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+      &::before {
+        opacity: 0.25;
+      }
+
+      h3 {
+        animation: bounce 0.5s;
+        color: vars.$text-light;
+      }
+
+      .skill-button {
+        opacity: 1;
+        transform: translateY(-3px);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  }
+}
