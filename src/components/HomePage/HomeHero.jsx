@@ -9,7 +9,7 @@ export default function HomeHero({ texts, downloadCV }) {
     <section className="home-hero">
       <div className="home-section-content">
         <h1>
-          {texts.home.greeting} <span>Baptiste</span> 👋
+          {texts.home.greeting} <span>Blaaup</span> 👋
         </h1>
         <p>{texts.home.intro}</p>
         <div className="home-section-buttons">

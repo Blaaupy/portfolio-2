@@ -9,8 +9,8 @@ export default function Home() {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/cv_baptiste.pdf";
-    link.download = "CV_Baptiste.pdf";
+    link.href = "/cv_blaaup.pdf";
+    link.download = "CV_Blaaup.pdf";
     link.click();
   };
 
