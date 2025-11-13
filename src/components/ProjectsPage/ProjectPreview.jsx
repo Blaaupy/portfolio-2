@@ -3,19 +3,19 @@ import "./ProjectPreview.scss";
 
 export default function ProjectPreview({ project }) {
   const [slideIndex, setSlideIndex] = useState(0);
+  const slides = project.slides || [];
 
-  const nextSlide = () =>
-    setSlideIndex((prev) => (prev + 1) % project.slides.length);
+  if (!slides.length) return null;
+
+  const nextSlide = () => setSlideIndex((prev) => (prev + 1) % slides.length);
   const prevSlide = () =>
-    setSlideIndex((prev) =>
-      prev === 0 ? project.slides.length - 1 : prev - 1
-    );
+    setSlideIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
-  const slide = project.slides[slideIndex];
+  const slide = slides[slideIndex];
 
   return (
     <div className="project-preview">
-      <h3>{project.title}</h3>
+      <h3>Preview</h3>
 
       <div className="preview-container">
         {slide.type === "iframe" && (
@@ -49,7 +49,7 @@ export default function ProjectPreview({ project }) {
 
       <div className="carousel-controls">
         <button onClick={prevSlide}>◀</button>
-        <span>{slideIndex + 1}/{project.slides.length}</span>
+        <span>{slideIndex + 1}/{slides.length}</span>
         <button onClick={nextSlide}>▶</button>
       </div>
     </div>

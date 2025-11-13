@@ -2,7 +2,6 @@
 
 .projects-page {
   text-align: center;
-  padding: 3rem 1rem;
 
   .projects-intro {
     max-width: 800px;
@@ -26,7 +25,8 @@
 }
 
 .projects-section {
-  padding: 4rem 2rem;
+  max-width: 1200px;
+  width: 100%;
   background: var(--bg-primary);
   color: var(--text);
 
