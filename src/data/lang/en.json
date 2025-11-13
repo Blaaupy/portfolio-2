@@ -69,5 +69,8 @@
     "infoTitle": "My contact info",
     "emailLabel": "Email",
     "phoneLabel": "Phone"
+  },
+  "footer": {
+    "AllRights": "All rights reserved"
   }
 }

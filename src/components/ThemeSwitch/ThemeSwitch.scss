@@ -1,11 +1,20 @@
 .theme-switch {
   display: flex;
   align-items: center;
-  gap: 8px; // espace entre icône et slider
+  gap: 5px; // <-- ajuste l'espacement entre les icônes et le switch
 
   .icon {
-    width: 20px;
+    width: 15px;
     height: 20px;
+    cursor: pointer;
+
+    &.active {
+      color: var(--accent); // couleur active
+    }
+
+    &.inactive {
+      color: var(--inactive); // couleur inactive
+    }
   }
 
   .switch {
@@ -27,7 +36,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: var(--border);
+      background-color: var(--accent);
       border-radius: 25px;
       transition: 0.4s;
 

@@ -18,9 +18,7 @@
 
     &.active {
       background-color: var(--accent);
-      color: vars.$text-light;
-      outline: 3px solid vars.$secondary-color;
-      outline-offset: -3px; // bordure vers l'intérieur
+      color: vars.$text-light;  
     }
   }
 }
@@ -33,7 +31,7 @@
   select {
     padding: 4px 6px;
     border-radius: 5px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--accent);
     background-color: var(--background);
     color: var(--text);
     cursor: pointer;

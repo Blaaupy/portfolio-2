@@ -34,7 +34,7 @@
       left: 50%;
       width: 3px;
       height: 100%;
-      background: rgba(0, 188, 201, 0.3); // ou utiliser var(--accent) avec rgba hack
+      background: var(--accent); // ou utiliser var(--accent) avec rgba hack
       transform: translateX(-50%);
       border-radius: 3px;
     }
@@ -61,7 +61,7 @@
 
       &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 4px 15px rgba(0, 188, 201, 0.2); // ou rgba(var(--accent))
+        box-shadow: 0 4px 15px var(--accent); // ou rgba(var(--accent))
       }
 
       .timeline-icon {
@@ -74,7 +74,7 @@
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        box-shadow: 0 0 10px rgba(0, 188, 201, 0.4);
+        box-shadow: 0 0 10px var(--accent);
       }
 
       .timeline-content {

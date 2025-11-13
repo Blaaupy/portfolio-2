@@ -2,24 +2,27 @@
 :root {
   --background: #ffffff;
   --text: #1a1a1a;
-  --accent: #00b894;
-  --border: #e0e0e0;
+  --accent: #3D7047;
   --shadow: rgba(0, 0, 0, 0.1);
+  --inactive: #cccccc;
 }
 
 /* Thème sombre */
 [data-theme="dark"] {
   --background: #1a1a1a;
   --text: #ffffff;
-  --accent: #00cec9;
-  --border: #555;
+  --accent: #8CB294;
   --shadow: rgba(0, 0, 0, 0.5);
+  --slider-bg: #444444;
 }
-
+/* Thème clair */
+[data-theme="light"] {
+  --slider-bg: #e0e0e0;
+}
 // ==========================
 // Couleurs secondaires ou fixes (Sass)
 // ==========================
-$secondary-color: #0984e3;
+$secondary-color: #6CAC79;
 $text-light: #ffffff;
 $text-dark: #1a1a1a;
 
