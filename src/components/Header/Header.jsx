@@ -21,13 +21,13 @@ export default function Header() {
         <NavLink to="/portfolio-2" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
           {texts.nav.home}
         </NavLink>
-        <NavLink to="/about" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+        <NavLink to="/portfolio-2/about" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
           {texts.nav.about}
         </NavLink>
-        <NavLink to="/projects" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+        <NavLink to="/portfolio-2/projects" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
           {texts.nav.projects}
         </NavLink>
-        <NavLink to="/contact" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+        <NavLink to="/portfolio-2/contact" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
           {texts.nav.contact}
         </NavLink>
       </nav>

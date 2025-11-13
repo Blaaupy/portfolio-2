@@ -68,12 +68,17 @@
       opacity: 1;
       transform: scale(1.1);
     }
-
-    .rotated {
-      transform: rotate(180deg);
-    }
+  }
+  /* ✅ Flèche retournée une fois la card ouverte */
+  .project-arrow img.rotated {
+    transform: rotate(180deg);
   }
 
+  /* ✅ Empêche l’effet hover quand la card est ouverte */
+  .project-card-container.expanded .project-arrow:hover img {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
   /* --- Côté gauche --- */
   &.left {
     margin-left: 0;

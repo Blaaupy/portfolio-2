@@ -15,6 +15,47 @@
     "aboutText": "I create modern, responsive, and aesthetically pleasing interfaces. I like React, UI/UX design, and learning new technologies.",
     "aboutBtn": "See more",
     "skillsTitle": "Skills",
-    "skills": ["React / Vite", "HTML & CSS / SCSS", "Modern JavaScript (ES6+)", "Responsive Design", "UI/UX Design"]
+    "skills": [
+      "React / Vite",
+      "HTML & CSS / SCSS",
+      "Modern JavaScript (ES6+)",
+      "Responsive Design",
+      "UI/UX Design"
+    ]
+  },
+  "about": {
+    "intro": {
+      "title": "About Me",
+      "text": "Passionate about web development, I love creating interfaces that are both aesthetic and functional. My goal is to design projects that combine performance, accessibility, and creativity."
+    },
+    "skills": {
+      "title": "My Skills",
+      "intro": "Here’s an overview of the technologies I most often work with.",
+      "button": "View projects"
+    },
+    "journey": {
+      "title": "Journey & Learning",
+      "items": [
+        {
+          "title": "Web Developer Training (RNCP 37829)",
+          "subtitle": "OpenClassrooms — 2025",
+          "description": "Comprehensive learning of front-end and back-end development through 8 professional projects."
+        },
+        {
+          "title": "Personal Projects & Portfolio",
+          "subtitle": "2024 - 2025",
+          "description": "Design and development of several projects using React, Node.js, and Sass to refine my skills."
+        },
+        {
+          "title": "Professional Experience",
+          "subtitle": "2023 - 2024",
+          "description": "Non-development experience that strengthened my autonomy, rigor, and teamwork abilities."
+        }
+      ]
+    },
+    "actions": {
+      "download": "Download my CV",
+      "contact": "Contact me"
+    }
   }
 }

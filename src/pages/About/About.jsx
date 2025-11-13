@@ -1,9 +1,12 @@
+import { useContext } from "react";
+import { LanguageContext } from "../../context/LanguageContext";
 import AboutIntro from "../../components/AboutPage/AboutIntro";
-import AboutJourney from "../../components/AboutPage/Parcours";
 import AboutSkills from "../../components/AboutPage/AboutSkills";
+import Parcours from "../../components/AboutPage/Parcours";
 import AboutActions from "../../components/AboutPage/AboutActions";
 
 export default function About() {
+  const { texts } = useContext(LanguageContext);
 
   const downloadCV = () => {
     const link = document.createElement("a");
@@ -14,10 +17,10 @@ export default function About() {
 
   return (
     <section className="about-page page-container">
-      <AboutIntro />
-      <AboutJourney />
-      <AboutSkills />
-      <AboutActions downloadCV={downloadCV} />
+      <AboutIntro texts={texts} />
+      <Parcours texts={texts} />
+      <AboutSkills texts={texts} />
+      <AboutActions texts={texts} downloadCV={downloadCV} />
     </section>
   );
 }

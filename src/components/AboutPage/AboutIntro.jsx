@@ -1,13 +1,10 @@
 import "./AboutIntro.scss";
 
-export default function AboutIntro() {
+export default function AboutIntro({ texts }) {
   return (
     <div className="about-intro">
-      <h1>À propos de moi</h1>
-      <p>
-        Passionné par le développement web, j’aime créer des interfaces à la fois esthétiques et fonctionnelles. 
-        Mon objectif est de concevoir des projets qui allient performance, accessibilité et créativité.
-      </p>
+      <h1>{texts.about.intro.title}</h1>
+      <p>{texts.about.intro.text}</p>
     </div>
   );
 }
