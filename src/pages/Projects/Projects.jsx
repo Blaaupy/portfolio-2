@@ -23,7 +23,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="projects-section">
+    <section className="projects-section page-container">
       <h1>Mes Projets</h1>
       <div className="projects-container">
         {projects.map((project, index) => (

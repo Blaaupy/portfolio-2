@@ -1,7 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+import { LanguageContext } from "../../context/LanguageContext";
 import "./Contact.scss";
 
 export default function Contact() {
+  const { texts } = useContext(LanguageContext);
+
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [success, setSuccess] = useState(false);
 
@@ -18,6 +21,7 @@ export default function Contact() {
     console.log(form);
     setSuccess(true);
     setForm({ name: "", email: "", message: "" });
+    setTimeout(() => setSuccess(false), 5000); // fait disparaître le message après 5s
   };
 
   useEffect(() => {
@@ -42,11 +46,8 @@ export default function Contact() {
   return (
     <section className="contact-page page-container">
       <div className="contact-intro fade-up" ref={introRef}>
-        <h1>Contactez-moi</h1>
-        <p>
-          Vous avez un projet, une question ou simplement envie de dire bonjour ? <br />
-          N’hésitez pas à m’envoyer un message !
-        </p>
+        <h1>{texts.contact.title}</h1>
+        <p>{texts.contact.text}</p>
       </div>
 
       <div className="contact-wrapper">
@@ -58,7 +59,7 @@ export default function Contact() {
           <input
             type="text"
             name="name"
-            placeholder="Votre nom"
+            placeholder={texts.contact.namePlaceholder}
             value={form.name}
             onChange={handleChange}
             required
@@ -66,36 +67,43 @@ export default function Contact() {
           <input
             type="email"
             name="email"
-            placeholder="Votre email"
+            placeholder={texts.contact.emailPlaceholder}
             value={form.email}
             onChange={handleChange}
             required
+            pattern="^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$"
           />
           <textarea
             name="message"
-            placeholder="Votre message"
+            placeholder={texts.contact.messagePlaceholder}
             value={form.message}
             onChange={handleChange}
             rows="5"
             required
           ></textarea>
           <button type="submit" className="btn">
-            Envoyer
+            {texts.contact.submitBtn}
           </button>
-          {success && <p className="success-msg">Merci, message envoyé !</p>}
+          {success && <p className="success-msg">{texts.contact.successMsg}</p>}
         </form>
 
         <div className="contact-info fade-up" ref={infoRef}>
-          <h3>Mes coordonnées</h3>
+          <h3>{texts.contact.infoTitle}</h3>
           <p>
-            Email : <a href="mailto:blaaup@example.com">blaaup@example.com</a>
+            {texts.contact.emailLabel} :{" "}
+            <a href="mailto:blaaup@example.com">blaaup@example.com</a>
           </p>
           <p>
-            Téléphone : <a href="tel:+33000000000">+33 0 00 00 00 00</a>
+            {texts.contact.phoneLabel} :{" "}
+            <a href="tel:+33000000000">+33 0 00 00 00 00</a>
           </p>
           <div className="social-links">
-            <a href="https://github.com/" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/" target="_blank">
+              GitHub
+            </a>
+            <a href="https://linkedin.com/" target="_blank">
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>

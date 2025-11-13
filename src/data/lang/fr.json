@@ -57,5 +57,17 @@
       "download": "Télécharger mon CV",
       "contact": "Contactez-moi"
     }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "text": "Vous avez un projet, une question ou simplement envie de dire bonjour ? N’hésitez pas à m’envoyer un message !",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "Votre email",
+    "messagePlaceholder": "Votre message",
+    "submitBtn": "Envoyer",
+    "successMsg": "Merci, message envoyé !",
+    "infoTitle": "Mes coordonnées",
+    "emailLabel": "Email",
+    "phoneLabel": "Téléphone"
   }
 }

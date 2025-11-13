@@ -57,5 +57,17 @@
       "download": "Download my CV",
       "contact": "Contact me"
     }
+  },
+  "contact": {
+    "title": "Contact me",
+    "text": "Have a project, a question or just want to say hi ? Feel free to send me a message !",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "messagePlaceholder": "Your message",
+    "submitBtn": "Send",
+    "successMsg": "Thanks, message sent!",
+    "infoTitle": "My contact info",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone"
   }
 }
