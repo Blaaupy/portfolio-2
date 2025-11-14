@@ -7,6 +7,7 @@
   border: 2px solid var(--accent);
   border-radius: $radius-lg;
   box-shadow: 0 0 15px var(--shadow);
+  /* margin supprimé intentionnellement pour permettre align-self left/right */
   width: 80%;
   max-width: 900px;
   transition: all 0.5s ease;
@@ -17,7 +18,7 @@
   .project-main {
     display: flex;
     align-items: center;
-    justify-content: flex-start; // sera remplacé par left/right
+    /* justify-content contrôlé par .left / .right via align-self sur le container parent */
     padding: $spacing-md;
     gap: $spacing-md;
     position: relative;
@@ -127,16 +128,37 @@
     }
   }
 
+  /* --- Côté gauche / droite — PLACEMENT de la card dans la colonne --- */
+  /* IMPORTANT : on utilise align-self sur le container (.project-card-container) au lieu de
+     manipuler justify-content dans .project-main. Cela permet d'avoir une card alignée à gauche ou à droite. */
+
   /* --- Côté gauche / droite --- */
-  &.left .project-main {
-    justify-content: flex-start;
-    text-align: left;
+  &.left {
+    justify-self: flex-start;
+
+    .project-main {
+      flex-direction: row; /* ordre normal = logo → info → arrow */
+      text-align: left;
+
+      .project-info {
+        text-align: left;
+      }
+    }
   }
 
-  &.right .project-main {
-    justify-content: flex-end;
-    text-align: right;
+  &.right {
+    justify-self: flex-end;
+
+    .project-main {
+      flex-direction: row-reverse; /* inverse l’ordre → arrow → info → logo */
+      text-align: right;
+
+      .project-info {
+        text-align: right;
+      }
+    }
   }
+
 
   @keyframes fadeIn {
     from {

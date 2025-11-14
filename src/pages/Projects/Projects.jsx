@@ -1,5 +1,7 @@
 import "./Projects.scss";
 import ProjectCard from "../../components/ProjectsPage/ProjectCard";
+import { useRef, useState } from "react";
+import FloatingMenu from "../../components/ProjectsPage/ProjectFloatingMenu";
 
 const projects = [
   {
@@ -25,26 +27,56 @@ const projects = [
     descriptionLong:
       "Développement complet du front-end en JavaScript et intégration d’un back-end Node/Express.",
     slides: [
-      { type: "iframe",
-        url: "https://blaaupy.github.io/Portfolio-architecte-sophie-bluel/"
+      {
+        type: "iframe",
+        url: "https://blaaupy.github.io/Portfolio-architecte-sophie-bluel/",
       },
     ],
   },
 ];
 
 export default function Projects() {
+
+  const cardRefs = useRef([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // scroll to card
+  const handleSelect = (index) => {
+    setActiveIndex(index);
+
+    if (cardRefs.current[index]) {
+      cardRefs.current[index].scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  };
+
   return (
-    <section className="projects-section page-container">
-      <h1>Mes Projets</h1>
-      <div className="projects-container">
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            isLeft={index % 2 === 0}
-          />
-        ))}
-      </div>
-    </section>
+    <>
+      <FloatingMenu
+        projects={projects}
+        activeIndex={activeIndex}
+        onSelect={handleSelect}
+      />
+
+      <section className="projects-section page-container">
+        <h1>Mes Projets</h1>
+
+        <div className="projects-container">
+          {projects.map((project, index) => (
+            <div
+              key={project.id}
+              ref={(el) => (cardRefs.current[index] = el)}
+            >
+              <ProjectCard
+                project={project}
+                isLeft={index % 2 === 0}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
