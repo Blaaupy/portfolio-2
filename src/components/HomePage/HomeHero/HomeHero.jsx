@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./HomeHero.scss";
-import heroImage from "../../assets/images/999f3d63475d1d16840805d182afb56b.png";
+import heroImage from "../../../assets/images/999f3d63475d1d16840805d182afb56b.png";
 
 export default function HomeHero({ texts, downloadCV }) {
   const navigate = useNavigate();

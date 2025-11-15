@@ -1,20 +1,38 @@
-[
-  {
-    "id": 1,
-    "title": "Portfolio React",
-    "descriptionShort": "Mon site personnel développé avec React, Vite et SCSS.",
-    "logo": "/src/assets/images/Logos/React-icon.svg"
-  },
-  {
-    "id": 2,
-    "title": "ScanWatcher",
-    "descriptionShort": "Un outil Node.js qui surveille les sorties de webtoons et envoie des notifications Discord.",
-    "logo": "/images/scanwatcher-logo.svg"
-  },
-  {
-    "id": 3,
-    "title": "Booki",
-    "descriptionShort": "Site de réservation d’hébergements responsive avec HTML/CSS.",
-    "logo": "/src/assets/images/Logos/Booki.png"
-  }
-]
+{
+  "projects": [
+    {
+      "id": 1,
+      "titleFr": "Booki",
+      "titleEn": "Booki",
+      "logo": "/portfolio-2/images/Booki.png",
+      "shortFr": "Intégration responsive d’un site d’hébergement.",
+      "shortEn": "Intégration responsive d’un site d’hébergement.",
+      "longFr": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
+      "longEn": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
+      "technos": ["HTML", "CSS"],
+      "slides": [
+        {
+          "type": "iframe",
+          "url": "https://blaaupy.github.io/booki-starter-code/"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titleFr": "Sophie Bluel - Architecte",
+      "titleEn": "Sophie Bluel - Architect",
+      "logo": "/portfolio-2/images/SophieBluel.png",
+      "shortFr": "Site de portfolio interactif avec interface d’administration.",
+      "shortEn": "Interactive portfolio website with admin panel.",
+      "longFr": "Développement complet du front-end en JavaScript et intégration d’un back-end Node/Express.",
+      "longEn": "Full front-end development in JavaScript with Node/Express backend integration.",
+      "technos": ["JavaScript", "HTML", "CSS", "Node"],
+      "slides": [
+        {
+          "type": "iframe",
+          "url": "https://blaaupy.github.io/Portfolio-architecte-sophie-bluel/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../context/LanguageContext";
-import HomeHero from "../../components/HomePage/HomeHero";
-import HomeAbout from "../../components/HomePage/HomeAbout";
-import HomeSkills from "../../components/HomePage/HomeSkills";
+import HomeHero from "../../components/HomePage/HomeHero/HomeHero";
+import HomeAbout from "../../components/HomePage/HomeAbout/HomeAbout";
+import HomeSkills from "../../components/HomePage/HomeSkills/HomeSkills";
 
 export default function Home() {
   const { texts } = useContext(LanguageContext);

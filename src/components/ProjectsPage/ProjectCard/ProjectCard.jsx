@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./ProjectCard.scss";
-import ArrowLeft from "../../assets/images/ArrowLeft.png";
-import ArrowRight from "../../assets/images/ArrowRight.png";
-import ArrowUp from "../../assets/images/ArrowUp.png";
-import ProjectPreview from "./ProjectPreview";
+import ArrowLeft from "../../../assets/images/ArrowLeft.png";
+import ArrowRight from "../../../assets/images/ArrowRight.png";
+import ArrowUp from "../../../assets/images/ArrowUp.png";
+import ProjectPreview from "../ProjectContent/ProjectContent";
+import { LanguageContext } from "../../../context/LanguageContext";
 
 export default function ProjectCard({ project, isLeft }) {
+  const { language } = useContext(LanguageContext);
+  const title = language === "fr" ? project.titleFr : project.titleEn;
+  const shortDesc = language === "fr" ? project.shortFr : project.shortEn;
+  const longDesc = language === "fr" ? project.longFr : project.longEn;
+  const logo = project.logo;
+
   const [isExpanded, setIsExpanded] = useState(false); // étend la card
   const [showPreview, setShowPreview] = useState(false); // affiche la preview
 
@@ -30,16 +37,16 @@ export default function ProjectCard({ project, isLeft }) {
       {/* --- Partie principale --- */}
       <div className="project-main">
         <div className="project-logo">
-          <img src={project.logo} alt={`Logo de ${project.title}`} />
+          <img src={logo} alt={`Logo de ${title}`} />
         </div>
 
         <div className="project-info">
-          <h2>{project.title}</h2>
-          <p>{project.descriptionShort}</p>
+          <h2>{title}</h2>
+          <p>{shortDesc}</p>
 
           {isExpanded && (
             <div className="project-details">
-              <p>{project.descriptionLong}</p>
+              <p>{longDesc}</p>
             </div>
           )}
         </div>

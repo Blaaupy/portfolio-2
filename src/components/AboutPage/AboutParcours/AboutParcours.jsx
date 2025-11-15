@@ -1,4 +1,4 @@
-import "./Parcours.scss";
+import "./AboutParcours.scss";
 import { GraduationCap, Code2, Briefcase } from "lucide-react";
 import { useEffect } from "react";
 

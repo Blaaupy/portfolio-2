@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./ProjectPreview.scss";
+import "./ProjectContent.scss";
 
 export default function ProjectPreview({ project }) {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -45,12 +45,6 @@ export default function ProjectPreview({ project }) {
         {slide.type === "image" && (
           <img src={slide.src} alt={project.title} />
         )}
-      </div>
-
-      <div className="carousel-controls">
-        <button onClick={prevSlide}>◀</button>
-        <span>{slideIndex + 1}/{slides.length}</span>
-        <button onClick={nextSlide}>▶</button>
       </div>
     </div>
   );

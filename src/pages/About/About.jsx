@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../context/LanguageContext";
-import AboutIntro from "../../components/AboutPage/AboutIntro";
-import AboutSkills from "../../components/AboutPage/AboutSkills";
-import Parcours from "../../components/AboutPage/Parcours";
-import AboutActions from "../../components/AboutPage/AboutActions";
+import AboutIntro from "../../components/AboutPage/AboutIntro/AboutIntro";
+import AboutSkills from "../../components/AboutPage/AboutSkills/AboutSkills";
+import Parcours from "../../components/AboutPage/AboutParcours/AboutParcours";
+import AboutActions from "../../components/AboutPage/AboutActions/AboutActions";
 
 export default function About() {
   const { texts } = useContext(LanguageContext);
