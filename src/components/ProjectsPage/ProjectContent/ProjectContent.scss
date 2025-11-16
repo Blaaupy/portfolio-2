@@ -1,8 +1,7 @@
-.project-preview {
+.project-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1.5rem;
   width: 100%;
   gap: 1rem;
 
@@ -14,7 +13,7 @@
   .preview-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 16;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -29,6 +28,7 @@
       height: 100%;
       border: none;
       object-fit: cover;
+      border-radius: 12px;
     }
 
     .links-slide {
@@ -36,11 +36,13 @@
       flex-direction: column;
       align-items: center;
       gap: 0.5rem;
+      padding: 1rem;
 
       a {
         color: var(--accent);
         text-decoration: none;
         font-weight: 600;
+        transition: all 0.2s ease;
 
         &:hover {
           text-decoration: underline;
@@ -74,6 +76,19 @@
     span {
       font-size: 0.9rem;
       color: var(--text-color);
+    }
+  }
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+  .project-content {
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    .preview-container {
+      aspect-ratio: 16 / 9;
     }
   }
 }

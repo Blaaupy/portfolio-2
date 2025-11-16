@@ -1,0 +1,55 @@
+.project-internal-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  /* --- styles communs flèches + boutons --- */
+  .nav-arrow,
+  .nav-dots button {
+    height: 32px;
+    min-width: 32px;          /* même largeur minimale que les flèches */
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+  }
+
+  /* --- flèches --- */
+  .nav-arrow {
+    img {
+      width: 60%;
+      height: 60%;
+      object-fit: contain;
+      pointer-events: none;
+    }
+
+    &:hover {
+      background: var(--accent-light);
+    }
+  }
+
+  /* --- boutons numérotés --- */
+  .nav-dots {
+    display: flex;
+    gap: 4px;
+
+    button {
+      padding: 0;           /* important : pas de padding sinon désaligné */
+      font-size: 0.9rem;    /* tu peux ajuster */
+      line-height: 1;       /* centré proprement */
+
+      &:hover {
+        background: var(--accent-light);
+      }
+
+      &.active {
+        background: var(--accent);
+        color: #fff;
+      }
+    }
+  }
+}

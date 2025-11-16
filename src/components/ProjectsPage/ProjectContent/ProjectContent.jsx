@@ -1,27 +1,37 @@
-import { useState } from "react";
 import "./ProjectContent.scss";
+import ProjectInternalNav from "../ProjectInternalNav/ProjectInternalNav";
 
-export default function ProjectPreview({ project }) {
-  const [slideIndex, setSlideIndex] = useState(0);
+export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
+  // --- On synchronise l'état interne SI le parent change ---
   const slides = project.slides || [];
 
   if (!slides.length) return null;
 
-  const nextSlide = () => setSlideIndex((prev) => (prev + 1) % slides.length);
+  const nextSlide = () => onChangeSlide((slideIndex + 1) % slides.length);
   const prevSlide = () =>
-    setSlideIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    onChangeSlide(slideIndex === 0 ? slides.length - 1 : slideIndex - 1);
 
   const slide = slides[slideIndex];
 
   return (
-    <div className="project-preview">
+    <div className="project-content">
       <h3>Preview</h3>
 
+      {/* --- Navigation interne --- */}
+      <ProjectInternalNav
+        slides={slides}
+        current={slideIndex}
+        onPrev={prevSlide}
+        onNext={nextSlide}
+        onChange={onChangeSlide}
+      />
+
+      {/* --- Contenu de la slide --- */}
       <div className="preview-container">
         {slide.type === "iframe" && (
           <iframe
             src={slide.url}
-            title={project.title}
+            title={project.titleFr}
             loading="lazy"
             sandbox="allow-scripts allow-same-origin"
           />
@@ -43,7 +53,7 @@ export default function ProjectPreview({ project }) {
         )}
 
         {slide.type === "image" && (
-          <img src={slide.src} alt={project.title} />
+          <img src={slide.src} alt={project.titleFr} />
         )}
       </div>
     </div>

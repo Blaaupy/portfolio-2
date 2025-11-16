@@ -14,13 +14,17 @@
         {
           "type": "iframe",
           "url": "https://blaaupy.github.io/booki-starter-code/"
+        },
+        {
+          "type": "iframe",
+          "url": "https://blaaupy.github.io/Portfolio-architecte-sophie-bluel/"
         }
       ]
     },
     {
       "id": 2,
-      "titleFr": "Sophie Bluel - Architecte",
-      "titleEn": "Sophie Bluel - Architect",
+      "titleFr": "Sophie Bluel -- Architecte",
+      "titleEn": "Sophie Bluel -- Architect",
       "logo": "/portfolio-2/images/SophieBluel.png",
       "shortFr": "Site de portfolio interactif avec interface d’administration.",
       "shortEn": "Interactive portfolio website with admin panel.",
@@ -31,6 +35,57 @@
         {
           "type": "iframe",
           "url": "https://blaaupy.github.io/Portfolio-architecte-sophie-bluel/"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titleFr": "Nina Carducci -- Photographe",
+      "titleEn": "Nina Carducci -- Photographer",
+      "logo": "/portfolio-2/images/Booki.png",
+      "shortFr": "Intégration responsive d’un site d’hébergement.",
+      "shortEn": "Intégration responsive d’un site d’hébergement.",
+      "longFr": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
+      "longEn": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
+      "technos": ["HTML", "CSS"],
+      "slides": [
+        {
+          "type": "iframe",
+          "url": "https://blaaupy.github.io/Nina-Carducci-Dev/"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "titleFr": "Kasa",
+      "titleEn": "Kasa",
+      "logo": "/portfolio-2/images/Kasa.png",
+      "shortFr": "Intégration responsive d’un site d’hébergement.",
+      "shortEn": "Intégration responsive d’un site d’hébergement.",
+      "longFr": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
+      "longEn": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
+      "technos": ["HTML", "CSS"],
+      "slides": [
+        {
+          "type": "iframe",
+          "url": "https://blaaupy.github.io/Kasa/"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "titleFr": "Booki",
+      "titleEn": "Booki",
+      "logo": "/portfolio-2/images/Booki.png",
+      "shortFr": "Intégration responsive d’un site d’hébergement.",
+      "shortEn": "Intégration responsive d’un site d’hébergement.",
+      "longFr": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
+      "longEn": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
+      "technos": ["HTML", "CSS"],
+      "slides": [
+        {
+          "type": "iframe",
+          "url": "https://blaaupy.github.io/booki-starter-code/"
         }
       ]
     }
