@@ -2,90 +2,116 @@
   "projects": [
     {
       "id": 1,
-      "titleFr": "Booki",
-      "titleEn": "Booki",
+      "titleFr": "Booki — Site de réservation",
+      "titleEn": "Booki — Booking Website",
       "logo": "/portfolio-2/images/Booki.png",
-      "shortFr": "Intégration responsive d’un site d’hébergement.",
-      "shortEn": "Intégration responsive d’un site d’hébergement.",
-      "longFr": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
-      "longEn": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
-      "technos": ["HTML", "CSS"],
+
+      "shortFr": "Intégration complète d’un site de réservation en HTML/CSS, 100% responsive.",
+      "shortEn": "Full integration of a booking website using HTML/CSS, fully responsive.",
+
+      "longFr": "Création d’un site vitrine responsive à partir d'une maquette Figma. Travail autour du HTML sémantique, du Flexbox, du responsive mobile-first et de la validation W3C.",
+      "longEn": "Creation of a responsive showcase website from a Figma mockup. Focus on semantic HTML, Flexbox, mobile-first responsive design, and W3C validation.",
+
+      "technos": ["HTML", "CSS", "Responsive Design"],
+
       "slides": [
-        {
-          "type": "iframe",
-          "url": "https://blaaupy.github.io/booki-starter-code/"
-        },
-        {
-          "type": "iframe",
-          "url": "https://blaaupy.github.io/Portfolio-architecte-sophie-bluel/"
-        }
+        { "type": "iframe", "url": "https://blaaupy.github.io/booki-starter-code/" }
       ]
     },
     {
       "id": 2,
-      "titleFr": "Sophie Bluel -- Architecte",
-      "titleEn": "Sophie Bluel -- Architect",
+      "titleFr": "Sophie Bluel — Portfolio d’architecte",
+      "titleEn": "Sophie Bluel — Architect Portfolio",
       "logo": "/portfolio-2/images/SophieBluel.png",
-      "shortFr": "Site de portfolio interactif avec interface d’administration.",
-      "shortEn": "Interactive portfolio website with admin panel.",
-      "longFr": "Développement complet du front-end en JavaScript et intégration d’un back-end Node/Express.",
-      "longEn": "Full front-end development in JavaScript with Node/Express backend integration.",
-      "technos": ["JavaScript", "HTML", "CSS", "Node"],
+
+      "shortFr": "Site de portfolio dynamique avec système de login et gestion des projets.",
+      "shortEn": "Dynamic portfolio website with admin login and project management.",
+
+      "longFr": "Développement complet du front-end en JavaScript : affichage dynamique des projets, filtres, modale d’édition, upload d’images, suppression via API et authentification par token. Projet orienté manipulation DOM et appels API.",
+      "longEn": "Full front-end development in JavaScript: dynamic project display, filters, edit modal, image upload, deletion via API, and token-based authentication.",
+
+      "technos": ["JavaScript", "HTML", "CSS", "API REST"],
+
       "slides": [
-        {
-          "type": "iframe",
-          "url": "https://blaaupy.github.io/Portfolio-architecte-sophie-bluel/"
-        }
+        { "type": "iframe", "url": "https://blaaupy.github.io/Portfolio-architecte-sophie-bluel/" }
       ]
     },
     {
       "id": 3,
-      "titleFr": "Nina Carducci -- Photographe",
-      "titleEn": "Nina Carducci -- Photographer",
-      "logo": "/portfolio-2/images/Booki.png",
-      "shortFr": "Intégration responsive d’un site d’hébergement.",
-      "shortEn": "Intégration responsive d’un site d’hébergement.",
-      "longFr": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
-      "longEn": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
-      "technos": ["HTML", "CSS"],
+      "titleFr": "Nina Carducci — Photographe",
+      "titleEn": "Nina Carducci — Photographer",
+      "logo": "/portfolio-2/images/Nina.png",
+
+      "shortFr": "Optimisation SEO, performance et débogage complet d’un site de photographe.",
+      "shortEn": "SEO, performance optimization and debugging of a photographer portfolio.",
+
+      "longFr": "Correction des bugs JS/CSS, optimisation Lighthouse (Performance, SEO, Accessibilité), compression des images, lazy loading, amélioration du chargement, structure sémantique et métadonnées adaptées.",
+      "longEn": "Fixing JS/CSS issues, Lighthouse optimization (Performance, SEO, Accessibility), image compression, lazy loading, semantic structure, and metadata improvements.",
+
+      "technos": ["JavaScript", "SEO", "Performance", "Accessibility"],
+
       "slides": [
-        {
-          "type": "iframe",
-          "url": "https://blaaupy.github.io/Nina-Carducci-Dev/"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "titleFr": "Kasa",
-      "titleEn": "Kasa",
-      "logo": "/portfolio-2/images/Kasa.png",
-      "shortFr": "Intégration responsive d’un site d’hébergement.",
-      "shortEn": "Intégration responsive d’un site d’hébergement.",
-      "longFr": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
-      "longEn": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
-      "technos": ["HTML", "CSS"],
-      "slides": [
-        {
-          "type": "iframe",
-          "url": "https://blaaupy.github.io/Kasa/"
-        }
+        { "type": "iframe", "url": "https://blaaupy.github.io/Nina-Carducci-Dev/" }
       ]
     },
     {
       "id": 5,
-      "titleFr": "Booki",
-      "titleEn": "Booki",
-      "logo": "/portfolio-2/images/Booki.png",
-      "shortFr": "Intégration responsive d’un site d’hébergement.",
-      "shortEn": "Intégration responsive d’un site d’hébergement.",
-      "longFr": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
-      "longEn": "Projet HTML/CSS uniquement, avec responsive design et validation W3C complète.",
-      "technos": ["HTML", "CSS"],
+      "titleFr": "Mon Vieux Grimoire — API & Backend",
+      "titleEn": "Mon Vieux Grimoire — Backend & API",
+      "logo": "/portfolio-2/images/MonVieuxGrimoire.png",
+
+      "shortFr": "Développement d’une API sécurisée avec gestion des livres et système de notation.",
+      "shortEn": "Development of a secure API with book management and rating system.",
+
+      "longFr": "Construction d’un backend complet avec Node.js, Express et MongoDB : CRUD complet sur les livres, système de notation, validation sécurisée, gestion des images et middleware d’authentification JWT.",
+      "longEn": "Building a complete backend using Node.js, Express, and MongoDB: full CRUD for books, rating system, secure validation, image management and JWT authentication.",
+
+      "technos": ["Node.js", "Express", "MongoDB", "JWT"],
+
+      "slides": []
+    },
+    {
+      "id": 6,
+      "titleFr": "Qwenta — Interface de gestion de menus",
+      "titleEn": "Qwenta — Menu Management Interface",
+      "logo": "/portfolio-2/images/Qwenta.png",
+
+      "shortFr": "Intégration d’une interface multi-pages à partir d’une maquette Figma.",
+      "shortEn": "Integration of a multi-page interface from a Figma mockup.",
+
+      "longFr": "Réalisation d’une interface professionnelle en suivant une maquette Figma. Mise en page avancée, organisation SCSS, composants réutilisables et intégration pixel-perfect.",
+      "longEn": "Creation of a professional multi-page interface based on a Figma mockup. Advanced layout, SCSS organisation, reusable components and pixel-perfect integration.",
+
+      "technos": ["React", "SCSS", "UI Design"],
+
       "slides": [
         {
-          "type": "iframe",
-          "url": "https://blaaupy.github.io/booki-starter-code/"
+          "type": "files",
+          "title": "Spécifications Techniques",
+          "files": [
+            { "name": "PDF Spec", "url": "/portfolio-2/files/qwenta/Spécifications_Techniques_PDF.pdf" }
+          ]
+        },
+        {
+          "type": "files",
+          "title": "Veille Technologique",
+          "files": [
+            { "name": "PDF Veille", "url": "/portfolio-2/files/qwenta/Veille_Technologique_PDF.pdf" }
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Kanban Qwenta",
+          "src": "/portfolio-2/files/qwenta/Kanban_Screen.png"
+        },
+        {
+          "type": "allLinks",
+          "title": "Tous les fichiers Qwenta",
+          "links": [
+            { "name": "Spécifications Techniques", "url": "/portfolio-2/files/qwenta/Spec_Techniques.pdf" },
+            { "name": "Veille Technologique", "url": "/portfolio-2/files/qwenta/Veille_Technologique_PDF.pdf" },
+            { "name": "Kanban PDF", "url": "/portfolio-2/files/qwenta/Kanban_Qwenta_Final_Version.pdf" }
+          ]
         }
       ]
     }

@@ -55,6 +55,48 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
         {slide.type === "image" && (
           <img src={slide.src} alt={project.titleFr} />
         )}
+
+        {slide.type === "files" && (
+          <div className="files-slide">
+            <h4>{slide.title}</h4>
+
+            <div className="file-preview">
+              {slide.files.map((file, index) => {
+                const ext = file.url.split('.').pop().toLowerCase();
+
+                // PDF
+                if (ext === "pdf") {
+                  return (
+                    <iframe
+                      key={index}
+                      src={file.url}
+                      title={file.name}
+                      width="100%"
+                      height="500px"
+                    />
+                  );
+                }
+
+                // TXT
+                if (ext === "txt") {
+                  return (
+                    <iframe
+                      key={index}
+                      src={file.url}
+                      title={file.name}
+                      width="100%"
+                      height="300px"
+                    />
+                  );
+                }
+
+                // Autres → juste lien
+                return null;
+              })}
+            </div>
+          </div>
+        )}
+        
       </div>
     </div>
   );
