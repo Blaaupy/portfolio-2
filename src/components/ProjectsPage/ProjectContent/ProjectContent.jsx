@@ -15,24 +15,6 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
   const slide = slides[slideIndex];
   const t = (fr, en) => (language === "fr" ? fr : en);
 
-  const renderIframe = (file) => {
-    const iframeClass =
-      file.iframeType === "pdf"
-        ? "iframe-pdf"
-        : file.iframeType === "site"
-        ? "iframe-site"
-        : "";
-    return (
-      <iframe
-        key={file.url || file.name || file.title}
-        src={file.url}
-        title={file.title || file.name || slide.title || project.titleFr}
-        className={`project-iframe ${iframeClass}`}
-        loading="lazy"
-      />
-    );
-  };
-
   return (
     <div className={`project-content project-${project.id}`}>
       <h3 className="slide-preview-text">{t(slide.previewTextFr, slide.previewTextEn)}</h3>
