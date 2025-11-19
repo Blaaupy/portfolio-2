@@ -22,6 +22,36 @@
           "previewTextEn": "Project introduction: context, role and mission."
         },
         {
+          "type": "summary",
+          "title": "Résumé & Commentaires",
+          "previewTextFr": "Résumé des difficultés et points forts du projet",
+          "previewTextEn": "Summary of challenges and highlights",
+          "sections": [
+            {
+              "titleFr": "Défis techniques",
+              "titleEn": "Technical challenges",
+              "points": [
+                { "fr": "Découpage précis de la maquette Figma", "en": "Precise slicing of the Figma mockup" },
+                { "fr": "Gestion de la responsivité mobile-first", "en": "Mobile-first responsive handling" }
+              ]
+            },
+            {
+              "titleFr": "Solutions mises en place",
+              "titleEn": "Solutions implemented",
+              "points": [
+                { "fr": "Création de composants HTML/CSS réutilisables", "en": "Created reusable HTML/CSS components" },
+                { "fr": "Optimisation du CSS pour un rendu fluide", "en": "CSS optimization for smooth rendering" }
+              ]
+            },
+            {
+              "titleFr": "Points forts du projet",
+              "titleEn": "Project highlights",
+              "contentFr": "Site responsive, conforme aux maquettes et validé W3C. Apprentissage solide du workflow intégration front-end.",
+              "contentEn": "Responsive website, faithful to the mockups, W3C validated. Strong learning experience in front-end integration workflow."
+            }
+          ]
+        },
+        {
           "type": "files",
           "iframeType": "pdf",
           "previewTextFr": "Spécifications fonctionnelles et techniques du site web Booki",
@@ -64,14 +94,14 @@
         },
         {
           "type": "allLinks",
-          "previewTextFr": "Tous les fichiers Booki",
           "previewTextEn": "All Booki files",
+          "previewTextFr": "Tous les fichiers Booki",
           "links": [
             { "name": "Première Maquette / First Mockup", "url": "/portfolio-2/files/booki/Premier_découpage_maquette.jpg", "type": "download" },
             { "name": "Maquette / Mockup Clean", "url": "/portfolio-2/files/booki/Découpage_maquette_final.jpg", "type": "download" },
             { "name": "Booki Dev Web - Note de synthèse pour intégration du site Booki", "url": "/portfolio-2/files/booki/DW+Booki+-+Note+de+synthese.pdf", "type": "download" },
             { "name": "Maquette Original / Original Mockup", "url": "https://www.figma.com/design/r9YJyUkpVdrxzBBKGH7reY/Maquettes-Booki--desktop--mobile--tablette-?node-id=3-0&p=f&t=mcKTnz0PjGDT30Dg-0", "type": "navToLink" },
-            { "name": "Lien GitHub", "url": "https://github.com/Blaaupy/Mon-vieux-Grimoir-Backend", "type": "navToLink" }
+            { "name": "Lien GitHub", "url": "https://github.com/Blaaupy/booki-starter-code", "type": "navToLink" }
           ]
         }
       ]
@@ -102,9 +132,39 @@
           "previewTextEn": "Project introduction: context, role and main tasks."
         },
         {
+          "type": "summary",
+          "title": "Résumé & Commentaires",
+          "previewTextFr": "Résumé des difficultés et points forts du projet",
+          "previewTextEn": "Summary of challenges and highlights",
+          "sections": [
+            {
+              "titleFr": "Défis techniques",
+              "titleEn": "Technical challenges",
+              "points": [
+                { "fr": "Communication avec l’API tout en gardant l’interface fluide", "en": "API communication while keeping UI smooth" },
+                { "fr": "Création de la modale upload from scratch", "en": "Built upload modal from scratch" }
+              ]
+            },
+            {
+              "titleFr": "Solutions mises en place",
+              "titleEn": "Solutions implemented",
+              "points": [
+                { "fr": "Gestion dynamique du DOM pour l’affichage des projets", "en": "Dynamic DOM handling for project display" },
+                { "fr": "Implémentation de filtres et modale fonctionnels", "en": "Implemented functional filters and modal" }
+              ]
+            },
+            {
+              "titleFr": "Points forts du projet",
+              "titleEn": "Project highlights",
+              "contentFr": "Portfolio interactif avec login sécurisé, filtres dynamiques et interface responsive.",
+              "contentEn": "Interactive portfolio with secure login, dynamic filters, and responsive interface."
+            }
+          ]
+        },
+        {
           "type": "doubleImage",
-          "previewTextFr": "Maquette & Kanban",
-          "previewTextEn": "Corrected slicing: cleaner segmentation, better-separated sections and clearer structure.",
+          "previewTextFr": "Maquette du projet et organisation des tâches via Kanban",
+          "previewTextEn": "Project mockup and task organization via Kanban",
           "images": [
             {
               "src": "/portfolio-2/files/sophiebluel/HomepageSophieBluel.png",
@@ -124,13 +184,42 @@
           "type": "video",
           "title": "Fonctionnalités dynamiques",
           "src": "/portfolio-2/files/sophiebluel/SophieBluelFonctionnalitées.mp4",
-          "previewTextFr": "Présentation des interactions : authentification, ajout/suppression de médias, gestion de la modale.",
-          "previewTextEn": "Showcase of interactions: authentication, media add/delete, modal management."
+          "previewTextFr": "Présentation des fonctionnalités dynamiques du portfolio",
+          "previewTextEn": "Showcase of dynamic portfolio features"
         },
         {
           "type": "iframe",
           "iframeType": "site",
+          "previewTextFr": "Résultat final : intégration complète du site et des fonctionnalités",
+          "previewTextEn": "Final result: complete integration of the site and features",
           "url": "https://blaaupy.github.io/Portfolio-architecte-sophie-bluel/"
+        },
+        {
+          "type": "allLinks",
+          "previewTextFr": "Tous les fichiers du projet Sophie Bluel",
+          "previewTextEn": "All Sophie Bluel project files",
+          "links": [
+            { 
+              "name": "Tâches du Kanban / Kanban tasks", 
+              "url": "/portfolio-2/files/sophiebluel/KanbanSophieBluel.png", 
+              "type": "download" 
+            },
+            { 
+              "name": "Vidéo des interactions / Interaction video", 
+              "url": "/portfolio-2/files/sophiebluel/SophieBluelFonctionnalitées.mp4", 
+              "type": "download" 
+            },
+            { 
+              "name": "Maquette complète / Complete mockup", 
+              "url": "https://www.figma.com/design/kfKHknHySoTibZfdolGAX6/Sophie-Bluel---Desktop?node-id=0-1&p=f&t=EjqZlPxcRaTJEFfK-0", 
+              "type": "navToLink" 
+            },
+            { 
+              "name": "Lien GitHub / GitHub link", 
+              "url": "https://github.com/Blaaupy/Portfolio-architecte-sophie-bluel", 
+              "type": "navToLink" 
+            }
+          ]
         }
       ]
     },
@@ -139,21 +228,100 @@
       "titleFr": "Nina Carducci — Photographe",
       "titleEn": "Nina Carducci — Photographer",
       "logo": "/portfolio-2/images/Nina.png",
-
       "shortFr": "Optimisation SEO, performance et débogage complet d’un site de photographe.",
       "shortEn": "SEO, performance optimization and debugging of a photographer portfolio.",
-
       "longFr": "Correction des bugs JS/CSS, optimisation Lighthouse (Performance, SEO, Accessibilité), compression des images, lazy loading, amélioration du chargement, structure sémantique et métadonnées adaptées.",
       "longEn": "Fixing JS/CSS issues, Lighthouse optimization (Performance, SEO, Accessibility), image compression, lazy loading, semantic structure, and metadata improvements.",
-
       "technos": ["JavaScript", "SEO", "Performance", "Accessibility"],
-
       "slides": [
-        { "type": "iframe", "url": "https://blaaupy.github.io/Nina-Carducci-Dev/" }
+        {
+          "type": "intro",
+          "title": "Présentation & Mission",
+          "contentFr": "Dans le cadre de ma formation en développement web, j’ai été chargé d’optimiser le site de Nina Carducci, photographe, en tant que développeur freelance. Ma mission consistait à analyser les performances et le référencement SEO, corriger les bugs existants, améliorer l’accessibilité du site, optimiser le chargement des pages et produire un rapport détaillant les modifications apportées. Ce projet m’a permis de me familiariser avec les audits Lighthouse et Wave, la manipulation du code existant et la mise en œuvre de bonnes pratiques SEO et d’accessibilité.",
+          "contentEn": "As part of my web development training, I was tasked with optimizing the website of Nina Carducci, a photographer, as a freelance developer. My mission was to analyze performance and SEO, fix existing bugs, improve site accessibility, optimize page loading, and produce a detailed report of the modifications made. This project allowed me to get familiar with Lighthouse and Wave audits, code manipulation, and implementing best practices in SEO and accessibility.",
+          "challengesFr": "L’un des principaux défis a été d’identifier et corriger les problèmes de performance et de référencement sans altérer le fonctionnement du site, tout en améliorant l’accessibilité pour tous les utilisateurs.",
+          "challengesEn": "One of the main challenges was identifying and fixing performance and SEO issues without affecting site functionality, while improving accessibility for all users.",
+          "previewTextFr": "Introduction du projet : contexte, rôle et missions principales.",
+          "previewTextEn": "Project introduction: context, role and main tasks."
+        },
+        {
+          "type": "summary",
+          "title": "Résumé & Commentaires",
+          "previewTextFr": "Résumé des difficultés et points forts du projet",
+          "previewTextEn": "Summary of challenges and highlights",
+          "sections": [
+            {
+              "titleFr": "Défis techniques",
+              "titleEn": "Technical challenges",
+              "points": [
+                { "fr": "Identifier et corriger les bugs JS/CSS existants", "en": "Identify and fix existing JS/CSS bugs" },
+                { "fr": "Optimisation SEO, performance et accessibilité", "en": "SEO, performance, and accessibility optimization" }
+              ]
+            },
+            {
+              "titleFr": "Solutions mises en place",
+              "titleEn": "Solutions implemented",
+              "points": [
+                { "fr": "Compression des images et lazy loading", "en": "Image compression and lazy loading" },
+                { "fr": "Amélioration de la structure sémantique et des métadonnées", "en": "Improved semantic structure and metadata" }
+              ]
+            },
+            {
+              "titleFr": "Points forts du projet",
+              "titleEn": "Project highlights",
+              "contentFr": "Rapport détaillé livré, site optimisé pour performances et SEO, accessibilité améliorée.",
+              "contentEn": "Detailed report delivered, site optimized for performance and SEO, improved accessibility."
+            }
+          ]
+        },
+        {
+          "type": "iframe",
+          "iframeType": "pdf",
+          "title": "Rapport Lighthouse avant optimisation",
+          "previewTextFr": "Audit Lighthouse du site avant optimisation.",
+          "previewTextEn": "Lighthouse report of the site before optimization.",
+          "url": "/portfolio-2/files/nina/Before_Optimisation_Lighthouse_Report.pdf"
+        },
+        {
+          "type": "iframe",
+          "iframeType": "pdf",
+          "title": "Rapport Lighthouse après optimisation",
+          "previewTextFr": "Audit Lighthouse du site après optimisation.",
+          "previewTextEn": "Lighthouse report of the site after optimization.",
+          "url": "/portfolio-2/files/nina/Optimised_Website_Lighthouse_Report.pdf"
+        },
+        {
+          "type": "iframe",
+          "iframeType": "pdf",
+          "title": "Rapport d’intervention",
+          "previewTextFr": "Rapport détaillant toutes les modifications effectuées sur le site.",
+          "previewTextEn": "Detailed report of all changes made on the website.",
+          "url": "/portfolio-2/files/nina/RapportOptimisation.pdf"
+        },
+        {
+          "type": "iframe",
+          "iframeType": "site",
+          "title": "Site final optimisé",
+          "previewTextFr": "Version finale du site optimisé pour les performances et le SEO.",
+          "previewTextEn": "Final version of the website optimized for performance and SEO.",
+          "url": "https://blaaupy.github.io/Nina-Carducci-Dev/"
+        },
+        {
+          "type": "allLinks",
+          "previewTextFr": "Tous les fichiers Nina Carducci",
+          "previewTextEn": "All Nina Carducci files",
+          "links": [
+            { "name": "Rapport Lighthouse avant optimisation", "url": "/portfolio-2/files/nina/Before_Optimisation_Lighthouse_Report.pdf", "type": "download" },
+            { "name": "Rapport Lighthouse après optimisation", "url": "/portfolio-2/files/nina/Optimised_Website_Lighthouse_Report.pdf", "type": "download" },
+            { "name": "Rapport d’intervention", "url": "/portfolio-2/files/nina/RapportOptimisation.pdf", "type": "download" },
+            { "name": "Site final optimisé", "url": "https://blaaupy.github.io/Nina-Carducci-Dev/", "type": "navToLink" },
+            { "name": "Lien GitHub", "url": "https://github.com/Blaaupy/Nina-Carducci-Dev", "type": "navToLink" }
+          ]
+        }
       ]
     },
     {
-      "id": 5,
+      "id": 4,
       "titleFr": "Mon Vieux Grimoire — API & Backend",
       "titleEn": "Mon Vieux Grimoire — Backend & API",
       "logo": "/portfolio-2/images/MonVieuxGrimoire.png",
@@ -166,10 +334,41 @@
 
       "technos": ["Node.js", "Express", "MongoDB", "JWT"],
 
-      "slides": []
+      "slides": [
+        {
+          "type": "summary",
+          "title": "Résumé & Commentaires",
+          "previewTextFr": "Résumé des difficultés et points forts du projet",
+          "previewTextEn": "Summary of challenges and highlights",
+          "sections": [
+            {
+              "titleFr": "Défis techniques",
+              "titleEn": "Technical challenges",
+              "points": [
+                { "fr": "Création d’une API sécurisée avec Node.js et Express", "en": "Built secure API with Node.js and Express" },
+                { "fr": "Gestion des images et système de notation", "en": "Image management and rating system" }
+              ]
+            },
+            {
+              "titleFr": "Solutions mises en place",
+              "titleEn": "Solutions implemented",
+              "points": [
+                { "fr": "CRUD complet sur les livres", "en": "Full CRUD on books" },
+                { "fr": "Middleware JWT pour sécuriser les endpoints", "en": "JWT middleware to secure endpoints" }
+              ]
+            },
+            {
+              "titleFr": "Points forts du projet",
+              "titleEn": "Project highlights",
+              "contentFr": "Backend complet et sécurisé, facile à maintenir et évolutif pour de futures fonctionnalités.",
+              "contentEn": "Complete and secure backend, maintainable and scalable for future features."
+            }
+          ]
+        }
+      ]
     },
     {
-      "id": 6,
+      "id": 5,
       "titleFr": "Qwenta — Interface de gestion de menus",
       "titleEn": "Qwenta — Menu Management Interface",
       "logo": "/portfolio-2/images/Qwenta.png",
@@ -183,6 +382,36 @@
       "technos": ["React", "SCSS", "UI Design"],
 
       "slides": [
+        {
+          "type": "summary",
+          "title": "Résumé & Commentaires",
+          "previewTextFr": "Résumé des difficultés et points forts du projet",
+          "previewTextEn": "Summary of challenges and highlights", 
+          "sections": [
+            {
+              "titleFr": "Défis techniques",
+              "titleEn": "Technical challenges",
+              "points": [
+                { "fr": "Intégration multi-pages pixel-perfect", "en": "Pixel-perfect multi-page integration" },
+                { "fr": "Organisation SCSS et composants réutilisables", "en": "SCSS organization and reusable components" }
+              ]
+            },
+            {
+              "titleFr": "Solutions mises en place",
+              "titleEn": "Solutions implemented",
+              "points": [
+                { "fr": "Respect strict de la maquette Figma", "en": "Strict adherence to Figma mockup" },
+                { "fr": "Kanban et gestion de fichiers techniques intégrés", "en": "Integrated Kanban and technical files management" }
+              ]
+            },
+            {
+              "titleFr": "Points forts du projet",
+              "titleEn": "Project highlights",
+              "contentFr": "Interface professionnelle, responsive et bien structurée, facile à maintenir.",
+              "contentEn": "Professional, responsive, well-structured interface, easy to maintain."
+            }
+          ]
+        },
         {
           "type": "files",
           "previewTextFr": "Spécifications techniques.",

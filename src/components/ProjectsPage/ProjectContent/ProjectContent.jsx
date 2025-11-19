@@ -28,6 +28,7 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
       />
 
       <div className="preview-container">
+        {/* Intro */}
         {slide.type === "intro" && (
           <div className="intro-slide">
             <h4>{slide.title}</h4>
@@ -49,7 +50,28 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
             )}
           </div>
         )}
+        {/* Résumer */}
+        {slide.type === "summary" && (
+          <div className="summary-slide">
+            <h4>{slide.title}</h4>
 
+            {slide.sections?.map((sec, i) => (
+              <div key={i} className="summary-section">
+                <h5>{t(sec.titleFr, sec.titleEn)}</h5>
+                {sec.points?.length > 0 ? (
+                  <ul>
+                    {sec.points.map((p, j) => (
+                      <li key={j}>{t(p.fr, p.en)}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>{t(sec.contentFr, sec.contentEn)}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+        {/* Iframe et ajoute une classe pdf ou site en fonction du iframeType */}
         {(slide.type === "iframe" || slide.type === "files") && (
           <div className="files-slide">
             <div className="file-preview">
@@ -69,7 +91,7 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
             </div>
           </div>
         )}
-
+        {/* Image */}
         {slide.type === "image" && (
           <div className="image-slide">
             {t(slide.captionFr, slide.captionEn) && (
@@ -78,7 +100,7 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
             <img src={slide.src} alt={slide.title || project.titleFr} />
           </div>
         )}
-
+        {/* Double Image */}
         {slide.type === "doubleImage" && (
           <div className="double-image-slide">
             {slide.images.map((img, i) => (
@@ -89,7 +111,7 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
             ))}
           </div>
         )}
-
+        {/*  Video */}
         {slide.type === "video" && (
           <div className="video-slide">
             <video controls>
