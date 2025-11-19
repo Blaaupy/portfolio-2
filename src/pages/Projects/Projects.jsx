@@ -1,10 +1,12 @@
 import "./Projects.scss";
 import ProjectCard from "../../components/ProjectsPage/ProjectCard/ProjectCard";
 import ProjectFloatingNav from "../../components/ProjectsPage/ProjectEasyNav/ProjectFloatingNav";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
 import ProjectsData from "../../data/projectsData.json";
+import { LanguageContext } from "../../context/LanguageContext"; 
 
 export default function Projects() {
+  const { texts } = useContext(LanguageContext);
   const projects = ProjectsData.projects;
   const cardRefs = useRef([]);
 
@@ -13,11 +15,18 @@ export default function Projects() {
   const [previewIndex, setPreviewIndex] = useState(null);
   const [slideIndex, setSlideIndex] = useState(0);
 
+  // ----------------------------------------------------
+  // RESET AUTOMATIQUE DU SLIDE LORSQU’ON CHANGE DE PROJET
+  // ----------------------------------------------------
+  useEffect(() => {
+    setSlideIndex(0);
+  }, [activeIndex]);
+  // ⤷ Dès que activeIndex change → le slider repart à 0
+
   // ----------------------------
   // Sélection d’un projet
   // ----------------------------
   const handleSelectProject = (index) => {
-    // Si on clique sur le même projet → reset complet
     if (activeIndex === index) {
       setActiveIndex(null);
       setExpandedIndex(null);
@@ -25,7 +34,6 @@ export default function Projects() {
       return;
     }
 
-    // Sinon comportement normal
     setActiveIndex(index);
     setExpandedIndex(null);
     setPreviewIndex(null);
@@ -43,13 +51,12 @@ export default function Projects() {
   // ----------------------------
   const handleToggleExpand = (index) => {
     if (expandedIndex === index) {
-      // Fermer card + preview
       setExpandedIndex(null);
       setPreviewIndex(null);
     } else {
       setExpandedIndex(index);
       setActiveIndex(index);
-      setPreviewIndex(null); // preview fermée de base
+      setPreviewIndex(null);
     }
   };
 
@@ -62,10 +69,11 @@ export default function Projects() {
     } else {
       setPreviewIndex(index);
       setActiveIndex(index);
-      setExpandedIndex(index); // une preview ne peut exister que si card est ouverte
+      setExpandedIndex(index);
     }
   };
-    // Handlers pour navigation interne
+
+  // Handlers pour navigation interne
   const handleNextSlide = () => {
     if (activeIndex === null) return;
     const slides = projects[activeIndex].slides || [];
@@ -90,8 +98,6 @@ export default function Projects() {
         onSelectProject={handleSelectProject}
         onToggleExpand={handleToggleExpand}
         onTogglePreview={handleTogglePreview}
-
-        // Props pour InternalNav
         currentSlide={slideIndex}
         onPrev={handlePrevSlide}
         onNext={handleNextSlide}
@@ -99,8 +105,11 @@ export default function Projects() {
       />
 
       <section className="projects-section">
-        <h1>Mes Projets</h1>
-
+        <div className="main-text">
+          <h1>{texts.project.title}</h1>
+          <p className="main-desc">{texts.project.desc}</p>
+        </div>
+        
         <div className="projects-container">
           {projects.map((project, index) => (
             <div key={project.id} ref={(el) => (cardRefs.current[index] = el)}>

@@ -70,6 +70,12 @@
     "emailLabel": "Email",
     "phoneLabel": "Téléphone"
   },
+  "project": {
+    "title": "Mes Projets",
+    "desc": "Les contextes présentés dans ces projets sont fictifs et servent à créer une immersion professionnelle. Ainsi, lorsque je dis « J’ai rejoint Booki en tant que développeur front-end junior », cela ne signifie pas que j’ai réellement intégré l’entreprise, mais que cela correspond au scénario fourni dans le cadre de ma formation. De plus, tous les documents et sites présentés sont en français, puisque l’intégration anglaise ne faisait pas partie des spécifications demandées durant la formation.",
+    "showMore": "Voir plus",
+    "showLess": "Voir Moins"
+  },
   "footer": {
     "AllRights": "Tous droits réservés"
   },

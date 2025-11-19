@@ -70,6 +70,12 @@
     "emailLabel": "Email",
     "phoneLabel": "Phone"
   },
+  "project": {
+    "title": "My Projects",
+    "desc": "The contexts presented in these projects are fictional and are intended to create a professional-like environment. Therefore, when I say “I joined Booki as a junior front-end developer,” it does not mean that I actually joined the company, but rather that it corresponds to the scenario provided as part of my training. Additionally, all the documents and websites presented are in French, as English integration was not part of the requirements during the training.",
+    "showMore": "Show More",
+    "showLess": "Show Less"
+  },
   "footer": {
     "AllRights": "All rights reserved"
   },

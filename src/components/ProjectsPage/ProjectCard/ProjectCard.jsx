@@ -16,7 +16,7 @@ export default function ProjectCard({
   slideIndex,    
   onChangeSlide,
 }) {
-  const { language } = useContext(LanguageContext);
+  const { language, texts } = useContext(LanguageContext);
 
   const title = language === "fr" ? project.titleFr : project.titleEn;
   const shortDesc = language === "fr" ? project.shortFr : project.shortEn;
@@ -49,7 +49,7 @@ export default function ProjectCard({
 
       {expanded && (
         <div className="project-toggle" onClick={onTogglePreview}>
-          <span>{showPreview ? "Voir moins" : "Voir plus"}</span>
+          <span>{showPreview ? texts.project.showLess : texts.project.showMore}</span>
           <img src={ArrowUp} className={showPreview ? "rotated" : ""} />
         </div>
       )}

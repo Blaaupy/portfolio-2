@@ -5,17 +5,63 @@
       "titleFr": "Booki — Site de réservation",
       "titleEn": "Booki — Booking Website",
       "logo": "/portfolio-2/images/Booki.png",
-
       "shortFr": "Intégration complète d’un site de réservation en HTML/CSS, 100% responsive.",
       "shortEn": "Full integration of a booking website using HTML/CSS, fully responsive.",
-
       "longFr": "Création d’un site vitrine responsive à partir d'une maquette Figma. Travail autour du HTML sémantique, du Flexbox, du responsive mobile-first et de la validation W3C.",
       "longEn": "Creation of a responsive showcase website from a Figma mockup. Focus on semantic HTML, Flexbox, mobile-first responsive design, and W3C validation.",
-
       "technos": ["HTML", "CSS", "Responsive Design"],
-
       "slides": [
-        { "type": "iframe", "url": "https://blaaupy.github.io/booki-starter-code/" }
+        {
+          "type": "intro",
+          "title": "Présentation & Mission",
+          "contentFr": "Dans le cadre de ma formation en développement web, j’ai intégré la start-up Booki en tant que développeur front-end junior. Ma mission consistait à créer la page d’accueil du site à partir des maquettes fournies par l’UI designer, en respectant les contraintes techniques et la structure imposée. Ce projet, l’un de mes premiers, m’a permis de me familiariser avec l’intégration web et de comprendre le workflow entre développeur et designer. Aujourd’hui, je découperais la maquette de manière plus détaillée pour anticiper certains problèmes de responsive.",
+          "contentEn": "As part of my web development training, I joined Booki as a junior front-end developer. My mission was to create the homepage from the UI designer’s mockups while respecting technical constraints and file structure. Being one of my first projects, it helped me get familiar with front-end integration and understand the developer-designer workflow. Today, I would slice the mockup in a more detailed way to better anticipate responsive issues.",
+          "challengesFr": "L’un des défis principaux a été d’adapter le découpage initial des maquettes. Certaines sections n’étaient pas assez détaillées, j’ai donc dû revoir le découpage et réorganiser certains éléments pour assurer un rendu précis et responsive.",
+          "challengesEn": "One of the main challenges was adapting the initial mockup slicing. Some sections were not detailed enough, so I had to refine the slicing and reorganize elements to ensure a precise and responsive layout.",
+          "previewTextFr": "Introduction du projet : Contexte, rôle et mission.",
+          "previewTextEn": "Project introduction: context, role and mission."
+        },
+        {
+          "type": "files",
+          "previewTextFr": "Spécifications fonctionnelles et techniques du site web Booki",
+          "previewTextEn": "Functional and technical specifications of the Booki website",
+          "files": [
+            { "name": "Booki Dev Web - Note de synthèse pour intégration du site Booki", "url": "/portfolio-2/files/booki/DW+Booki+-+Note+de+synthese.pdf" }
+          ]
+        },
+        {
+          "type": "image",
+          "title": "Découpage initial de la maquette",
+          "src": "/portfolio-2/files/booki/Premier_découpage_maquette.jpg",
+          "previewTextFr": "Premier découpage de maquette : première fois que je faisais ça, on voit plusieurs oublis (ex: barre de recherche).",
+          "previewTextEn": "First mockup slicing: first time doing this, several elements were missing (e.g., search bar)."
+        },
+        {
+          "type": "image",
+          "title": "Découpage corrigé",
+          "src": "/portfolio-2/files/booki/Découpage_maquette_final.jpg",
+          "previewTextFr": "Découpage corrigé : version plus propre, segments mieux séparés, sections plus cohérentes.",
+          "previewTextEn": "Corrected slicing: cleaner segmentation, better-separated sections and clearer structure."
+        },
+        {
+          "type": "iframe",
+          "title": "Page d'accueil intégrée",
+          "url": "https://blaaupy.github.io/booki-starter-code/",
+          "previewTextFr": "Résultat final : intégration complète de la page d’accueil en HTML/CSS responsive.",
+          "previewTextEn": "Final result: complete integration of the homepage with responsive HTML/CSS."
+        },
+        {
+          "type": "allLinks",
+          "previewTextFr": "Tous les fichiers Booki",
+          "previewTextEn": "All Booki files",
+          "links": [
+            { "name": "Première Maquette / First Mockup", "url": "/portfolio-2/files/booki/Premier_découpage_maquette.jpg", "type": "download" },
+            { "name": "Maquette / Mockup Clean", "url": "/portfolio-2/files/booki/Découpage_maquette_final.jpg", "type": "download" },
+            { "name": "Booki Dev Web - Note de synthèse pour intégration du site Booki", "url": "/portfolio-2/files/booki/DW+Booki+-+Note+de+synthese.pdf", "type": "download" },
+            { "name": "Maquette Original / Original Mockup", "url": "https://www.figma.com/design/r9YJyUkpVdrxzBBKGH7reY/Maquettes-Booki--desktop--mobile--tablette-?node-id=3-0&p=f&t=mcKTnz0PjGDT30Dg-0", "type": "navToLink" },
+            { "name": "Lien GitHub", "url": "https://github.com/Blaaupy/Mon-vieux-Grimoir-Backend", "type": "navToLink" }
+          ]
+        }
       ]
     },
     {
@@ -87,30 +133,35 @@
       "slides": [
         {
           "type": "files",
-          "title": "Spécifications Techniques",
+          "previewTextFr": "Spécifications techniques.",
+          "previewTextEn": "Technical specifications.",
           "files": [
             { "name": "PDF Spec", "url": "/portfolio-2/files/qwenta/Spécifications_Techniques_PDF.pdf" }
           ]
         },
         {
           "type": "files",
-          "title": "Veille Technologique",
+          "previewTextFr": "Veille technologique.",
+          "previewTextEn": "Technological monitoring.",
           "files": [
             { "name": "PDF Veille", "url": "/portfolio-2/files/qwenta/Veille_Technologique_PDF.pdf" }
           ]
         },
         {
           "type": "image",
-          "title": "Kanban Qwenta",
+          "previewTextFr": "Aperçu du Kanban.",
+          "previewTextEn": "Kanban Overview.",
           "src": "/portfolio-2/files/qwenta/Kanban_Screen.png"
         },
         {
           "type": "allLinks",
-          "title": "Tous les fichiers Qwenta",
+          "previewTextFr": "Tous les fichiers Qwenta",
+          "previewTextEn": "All Qwenta files",
           "links": [
-            { "name": "Spécifications Techniques", "url": "/portfolio-2/files/qwenta/Spec_Techniques.pdf" },
-            { "name": "Veille Technologique", "url": "/portfolio-2/files/qwenta/Veille_Technologique_PDF.pdf" },
-            { "name": "Kanban PDF", "url": "/portfolio-2/files/qwenta/Kanban_Qwenta_Final_Version.pdf" }
+            { "name": "Spécifications Techniques PDF", "url": "/portfolio-2/files/qwenta/Spec_Techniques.pdf", "type": "download" },
+            { "name": "Veille Technologique PDF", "url": "/portfolio-2/files/qwenta/Veille_Technologique_PDF.pdf", "type": "download" },
+            { "name": "Kanban PDF", "url": "/portfolio-2/files/qwenta/Kanban_Qwenta_Final_Version.pdf", "type": "download" },
+            { "name": "Lien GitHub", "url": "https://github.com/Blaaupy/Mon-vieux-Grimoir-Backend", "type": "navToLink" }
           ]
         }
       ]
