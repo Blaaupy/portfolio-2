@@ -4,6 +4,7 @@
   align-items: center;
   width: 100%;
   gap: 1.5rem;
+  
 
   /* ------------------------------------------------------- */
   /* PREVIEW TEXT (titre au-dessus de la slide)            */
@@ -56,6 +57,7 @@
 
     iframe {
       flex: 1;
+      height: 800px;
     }
   }
 
@@ -246,21 +248,47 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
   }
+  /* DOUBLE IMAGE SLIDE */
+  .double-image-slide {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    flex-wrap: wrap;
 
-  /* ------------------------------------------------------- */
-  /* SPECIAL BOOKI RULES (project-1 = Booki)               */
-  /* ------------------------------------------------------- */
-  .project-1 .image-slide img {
-    max-width: 900px;
-    max-height: 520px;
-    width: auto;
-    display: block;
-    margin: 0 auto;
-    padding: 8px;
-    border-radius: 12px;
-    background: var(--bg-primary);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .double-image-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 420px;
+      gap: 0.5rem;
 
+      img {
+        width: 100%;
+        border-radius: 14px;
+        box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+      }
+
+      p {
+        font-style: italic;
+        color: var(--text-color);
+        text-align: center;
+      }
+    }
+  }
+
+  /* VIDEO SLIDE */
+  .video-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    video {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 14px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+    }
   }
 }

@@ -23,11 +23,22 @@
         },
         {
           "type": "files",
+          "iframeType": "pdf",
           "previewTextFr": "Spécifications fonctionnelles et techniques du site web Booki",
           "previewTextEn": "Functional and technical specifications of the Booki website",
           "files": [
-            { "name": "Booki Dev Web - Note de synthèse pour intégration du site Booki", "url": "/portfolio-2/files/booki/DW+Booki+-+Note+de+synthese.pdf" }
+            {
+              "name": "Booki Dev Web - Note de synthèse pour intégration du site Booki",
+              "url": "/portfolio-2/files/booki/DW+Booki+-+Note+de+synthese.pdf"
+            }
           ]
+        },
+        {
+          "type": "image",
+          "title": "Maquette",
+          "src": "/portfolio-2/files/booki/Desktop.png",
+          "previewTextFr": "Maquette figma de Booki version desktop",
+          "previewTextEn": "Booki desktop version figma mockup"
         },
         {
           "type": "image",
@@ -45,6 +56,7 @@
         },
         {
           "type": "iframe",
+          "iframeType": "site",
           "title": "Page d'accueil intégrée",
           "url": "https://blaaupy.github.io/booki-starter-code/",
           "previewTextFr": "Résultat final : intégration complète de la page d’accueil en HTML/CSS responsive.",
@@ -79,7 +91,47 @@
       "technos": ["JavaScript", "HTML", "CSS", "API REST"],
 
       "slides": [
-        { "type": "iframe", "url": "https://blaaupy.github.io/Portfolio-architecte-sophie-bluel/" }
+        {
+          "type": "intro",
+          "title": "Présentation & Mission",
+          "contentFr": "Dans le cadre de ma formation en développement web, j’ai intégré le scénario ArchiWebos en tant que développeur front-end junior. Ma mission consistait à créer la page de présentation des travaux d'une architecte d’intérieur à partir du HTML fourni, à développer la page de connexion administrateur et une modale permettant d'uploader de nouveaux médias. Ce projet m’a permis de me familiariser avec la manipulation du DOM, la gestion des événements utilisateurs et la communication avec une API.",
+          "contentEn": "As part of my web development training, I joined the ArchiWebos scenario as a junior front-end developer. My mission was to create the portfolio page of an interior designer from the provided HTML, develop the admin login page, and create a modal for uploading new media. This project allowed me to get familiar with DOM manipulation, user event handling, and communication with an API.",
+          "challengesFr": "L’un des principaux défis a été de gérer la communication avec l’API tout en maintenant une interface fluide et réactive. Il a également fallu concevoir la modale d’upload from scratch et s’assurer que toutes les interactions utilisateurs fonctionnaient correctement.",
+          "challengesEn": "One of the main challenges was handling communication with the API while keeping a smooth and responsive interface. It was also necessary to create the upload modal from scratch and ensure all user interactions worked correctly.",
+          "previewTextFr": "Introduction du projet : Contexte, rôle et missions principales.",
+          "previewTextEn": "Project introduction: context, role and main tasks."
+        },
+        {
+          "type": "doubleImage",
+          "previewTextFr": "Maquette & Kanban",
+          "previewTextEn": "Corrected slicing: cleaner segmentation, better-separated sections and clearer structure.",
+          "images": [
+            {
+              "src": "/portfolio-2/files/sophiebluel/HomepageSophieBluel.png",
+              "labelFr": "Homepage — Maquette du projet",
+              "labelEn": "Homepage — Mockup of the project"
+            },
+            {
+              "src": "/portfolio-2/files/sophiebluel/KanbanSophieBluel.png",
+              "labelFr": "Kanban — Tâches du projet",
+              "labelEn": "Kanban — Project tasks"
+            }
+          ]
+          
+          
+        },
+        {
+          "type": "video",
+          "title": "Fonctionnalités dynamiques",
+          "src": "/portfolio-2/files/sophiebluel/SophieBluelFonctionnalitées.mp4",
+          "previewTextFr": "Présentation des interactions : authentification, ajout/suppression de médias, gestion de la modale.",
+          "previewTextEn": "Showcase of interactions: authentication, media add/delete, modal management."
+        },
+        {
+          "type": "iframe",
+          "iframeType": "site",
+          "url": "https://blaaupy.github.io/Portfolio-architecte-sophie-bluel/"
+        }
       ]
     },
     {
