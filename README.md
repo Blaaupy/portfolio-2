@@ -71,7 +71,7 @@ Assurez-vous d'avoir [Node.js](https://nodejs.org/) (version 18 ou plus) et [npm
 
 1.  Clonez le dépôt :
     ```bash
-    git clone https://github.com/Blaaup/portfolio-2.git
+    git clone https://github.com/Blaaupy/portfolio-2.git
     cd portfolio-2
     ```
 
@@ -113,7 +113,7 @@ Ce projet est configuré pour être déployé facilement sur **GitHub Pages** gr
     ```bash
     npm run deploy
     ```
-2.  Cela construira le projet et le publiera sur la branche `gh-pages` de votre dépôt, le rendant accessible à l'adresse `https://Blaaup.github.io/portfolio-2/`.
+2.  Cela construira le projet et le publiera sur la branche `gh-pages` de votre dépôt, le rendant accessible à l'adresse `https://Blaaupy.github.io/portfolio-2/`.
 
 ## 📝 License
 
