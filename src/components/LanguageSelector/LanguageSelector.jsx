@@ -9,6 +9,7 @@ export default function LanguageSelector() {
     <select
       value={language}
       onChange={(e) => changeLanguage(e.target.value)}
+      className="language-select"
     >
       <option value="fr">FR</option>
       <option value="en">EN</option>

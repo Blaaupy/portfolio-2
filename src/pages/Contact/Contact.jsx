@@ -112,7 +112,7 @@ export default function Contact() {
           
           {/* --- Icônes Sociales --- */}
           <div className="social-links">
-            <a href="https://github.com/" target="_blank" aria-label="Mon profil GitHub">
+            <a href="https://github.com/Blaaupy" target="_blank" aria-label="Mon profil GitHub">
               <FaGithub />
             </a>
             <a href="https://linkedin.com/" target="_blank" aria-label="Mon profil LinkedIn">

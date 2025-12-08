@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="footer">
       <p>© 2025 Blaaup - {texts.footer.AllRights}</p>
       <div className="links">
-        <a href="https://github.com/tonprofil" target="_blank" rel="noreferrer">
+        <a href="https://github.com/Blaaupy" target="_blank" rel="noreferrer">
           GitHub
         </a>
         <a href="https://linkedin.com/in/tonprofil" target="_blank" rel="noreferrer">
