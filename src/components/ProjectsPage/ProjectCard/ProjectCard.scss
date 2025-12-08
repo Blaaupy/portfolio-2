@@ -8,7 +8,7 @@
   border-radius: $radius-lg;
   box-shadow: 0 4px 12px var(--color-shadow);
   width: 80%;
-  max-width: $container-max-width - 100px; // Using container variable with adjustment
+  max-width: $container-max-width - 100px;
   transition: all $transition-slow;
   overflow: hidden;
   color: var(--color-text);
@@ -22,8 +22,8 @@
 
     .project-logo {
       img {
-        width: 5rem; // 80px
-        height: 5rem; // 80px
+        width: 5rem;
+        height: 5rem;
         object-fit: contain;
         border-radius: $radius-sm;
       }
@@ -36,13 +36,13 @@
         color: var(--color-primary);
         margin-bottom: $spacing-xs;
         font-size: $font-size-lg;
-        font-weight: 600; // Consider adding $font-weight-bold to variables
+        font-weight: 600;
       }
 
       p {
         font-size: $font-size-base;
         opacity: 0.9;
-        line-height: 1.5; // Consider adding $line-height-base to variables
+        line-height: 1.5;
       }
 
       .project-details {
@@ -53,15 +53,14 @@
         transition: opacity $transition-base, max-height $transition-base;
         
         p {
-          line-height: 1.6; // Consider adding $line-height-loose to variables
+          line-height: 1.6;
         }
       }
     }
 
     .project-arrow {
-      // Using variables for button size
-      width: 1.875rem; // 30px
-      height: 3.125rem; // 50px
+      width: 1.875rem;
+      height: 3.125rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -73,9 +72,8 @@
       color: var(--color-text);
 
       svg {
-        // Using variables for SVG size
-        width: 1.875rem; // 30px
-        height: 3.125rem; // 50px
+        width: 1.875rem;
+        height: 3.125rem;
         fill: currentColor;
         transition: transform $transition-base;
         
@@ -105,14 +103,14 @@
     cursor: pointer;
     color: var(--color-primary);
     font-size: $font-size-md;
-    font-weight: 500; // Consider adding $font-weight-medium to variables
+    font-weight: 500;
     transition: all $transition-base;
     border: none;
     width: 100%;
 
     svg {
-      width: 1.25rem; // 20px
-      height: 1.25rem; // 20px
+      width: 1.25rem;
+      height: 1.25rem;
       transition: transform $transition-base;
       fill: currentColor;
       
@@ -140,12 +138,12 @@
 
   &.expanded {
     width: 100%;
-    max-width: $container-max-width + 200px; // Using container variable with adjustment
+    max-width: $container-max-width + 200px;
     box-shadow: 0 8px 24px var(--color-shadow);
 
     .project-info .project-details {
       opacity: 1;
-      max-height: 18.75rem; // 300px
+      max-height: 18.75rem;
     }
   }
 
@@ -180,7 +178,7 @@
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(-0.625rem); // 10px
+      transform: translateY(-0.625rem);
     }
     to {
       opacity: 1;
@@ -188,7 +186,7 @@
     }
   }
 
-  // Responsive adjustments
+  // --- Adaptation pour tablettes et mobiles ---
   @media (max-width: 768px) {
     width: 95%;
     
@@ -197,8 +195,8 @@
       gap: $spacing-sm;
       
       .project-logo img {
-        width: 3.75rem; // 60px
-        height: 3.75rem; // 60px
+        width: 3.75rem;
+        height: 3.75rem;
       }
       
       .project-info {
@@ -211,14 +209,64 @@
         }
       }
 
-      // Adjust arrow size for mobile
       .project-arrow {
-        width: 1.5625rem; // 25px
-        height: 2.5rem; // 40px
+        width: 1.5625rem;
+        height: 2.5rem;
         
         svg {
-          width: 1.5rem; // 24px
-          height: 1.5rem; // 24px
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+
+  // --- NOUVEAU : "Shortcut" pour les très petits mobiles ---
+  @media screen and (max-width: 480px) {
+    width: 95%;
+
+    // On garde le layout global (gauche/droite) mais on adapte le contenu
+    .project-main {
+      // On met le contenu de la carte en colonne pour un meilleur affichage
+      flex-direction: column;
+      text-align: center;
+      gap: $spacing-sm;
+
+      // 1. On cache la flèche d'expansion qui n'a plus de sens
+      .project-arrow {
+        display: none;
+      }
+      
+      .project-logo img {
+        width: 3.75rem;
+        height: 3.75rem;
+      }
+      
+      .project-info {
+        h2 {
+          font-size: $font-size-md;
+        }
+        
+        p {
+          font-size: $font-size-sm;
+        }
+      }
+    }
+
+    // 2. On implémente le "shortcut" quand la carte est étendue
+    &.expanded {
+      .project-info {
+        // On cache la petite description pour ne pas avoir de doublon
+        > p { // Cible uniquement le premier 'p' direct
+          display: none;
+        }
+
+        // On affiche la grande description directement
+        .project-details {
+          display: block; // Force l'affichage
+          opacity: 1;
+          max-height: 500px; // Une valeur suffisamment grande pour le contenu
+          margin-top: $spacing-sm; // Ajoute un espacement visuel
         }
       }
     }

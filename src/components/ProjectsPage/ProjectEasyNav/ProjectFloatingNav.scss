@@ -40,7 +40,7 @@
   border: 1px solid var(--color-primary);
   background: var(--color-background);
   color: var(--color-text);
-  font-size: $font-size-sm;
+  font-size: $font-size-xs;
   cursor: pointer;
   transition: all $transition-fast;
 
@@ -83,5 +83,20 @@
 
   &:active {
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .floating-nav {
+    flex-wrap: wrap; // Permet aux boutons de passer à la ligne
+    justify-content: center;
+    bottom: $spacing-sm;
+    padding: $spacing-xs;
+    width: 90%;
+
+    .project-select {
+      width: 100%; // Le select prend toute la largeur
+      margin-bottom: $spacing-xs;
+    }
   }
 }

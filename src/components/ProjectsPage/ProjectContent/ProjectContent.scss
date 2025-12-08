@@ -25,7 +25,7 @@
 
     &:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 24px var(--color-shadow);
+      box-shadow: var(--shadow-lg);
     }
   }
 
@@ -37,14 +37,14 @@
     flex: 1;
     border-radius: $radius-md;
     background: var(--color-background);
-    box-shadow: 0 6px 20px var(--color-shadow);
+    box-shadow: var(--shadow-md);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: box-shadow $transition-base;
-    min-height: calc(100vh - 15.625rem); // Hauteur minimale basée sur la fenêtre (ex: 100vh - 250px de marge pour le header/etc.)
+    min-height: calc(100vh - 15.625rem); // Hauteur minimale basée sur la fenêtre
     &:hover {
-      box-shadow: 0 10px 30px var(--color-shadow);
+      box-shadow: var(--shadow-lg);
     }
   }
 
@@ -65,9 +65,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    // Use a subtle, theme-aware background, just like your other components
     background-color: rgba(var(--color-primary-rgb), 0.1);
-    backdrop-filter: blur(4px); // Adds a modern, soft-focus effect
+    backdrop-filter: blur(4px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,33 +74,31 @@
     gap: $spacing-md;
     z-index: 10;
     border-radius: $radius-md;
-    border: 1px solid rgba(var(--color-primary-rgb), 0.2); // Subtle border
+    border: 1px solid rgba(var(--color-primary-rgb), 0.2);
 
     p {
       font-size: $font-size-lg;
       font-weight: 600;
       text-align: center;
       max-width: 80%;
-      color: var(--color-text); // Use the main text color for readability
+      color: var(--color-text);
     }
 
     button {
-      // Style the button to match your project's design language
       padding: $spacing-sm $spacing-md;
       border-radius: $radius-md;
       font-size: $font-size-md;
       font-weight: 500;
       cursor: pointer;
       transition: all $transition-base;
-      background: transparent; // Transparent background
-      color: var(--color-primary); // Primary color for text/border
+      background: transparent;
+      color: var(--color-primary);
       border: 1px solid var(--color-primary);
 
       &:hover {
-        // Invert colors on hover, like your other buttons
         background: var(--color-primary);
         color: var(--color-background);
-        transform: translateY(-1px); // Subtle lift effect
+        transform: translateY(-1px);
       }
     }
   }
@@ -113,7 +110,7 @@
     position: relative;
     padding: $spacing-lg;
     border-radius: $radius-lg;
-    max-width: 57.5rem; // 920px
+    max-width: 57.5rem;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -128,7 +125,7 @@
       &::after {
         content: '';
         display: block;
-        width: 3.75rem; // 60px
+        width: 3.75rem;
         height: 4px;
         background: var(--color-primary);
         margin: 0.5rem auto 0;
@@ -137,7 +134,7 @@
     }
 
     .text-block {
-      max-width: 51.25rem; // 820px
+      max-width: 51.25rem;
       margin: $spacing-sm auto;
       font-size: $font-size-md;
       line-height: 1.7;
@@ -183,7 +180,7 @@
       color: var(--color-primary);
       border-left: 4px solid var(--color-primary);
       padding-left: $spacing-sm;
-      max-width: 51.25rem; // 820px
+      max-width: 51.25rem;
       margin-left: auto;
       margin-right: auto;
 
@@ -235,7 +232,7 @@
     }
 
     .link-cards {
-      max-width: 56.25rem; // 900px
+      max-width: 56.25rem;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -302,7 +299,7 @@
       height: auto;
       border-radius: $radius-md;
       object-fit: contain;
-      box-shadow: 0 10px 30px var(--color-shadow);
+      box-shadow: var(--shadow-lg);
       transition: transform $transition-base;
     }
   }
@@ -319,13 +316,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 26.25rem; // 420px
+      max-width: 26.25rem;
       gap: $spacing-xs;
 
       img {
         width: 100%;
         border-radius: $radius-md;
-        box-shadow: 0 8px 22px var(--color-shadow);
+        box-shadow: var(--shadow-lg);
       }
 
       p {
@@ -346,7 +343,7 @@
     video {
       width: 100%;
       border-radius: $radius-md;
-      box-shadow: 0 8px 22px var(--color-shadow);
+      box-shadow: var(--shadow-lg);
     }
   }
 
@@ -355,7 +352,7 @@
     position: relative;
     padding: $spacing-lg;
     border-radius: $radius-lg;
-    width: 57.5rem; // 920px
+    width: 57.5rem;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -372,7 +369,7 @@
       &::after {
         content: '';
         display: block;
-        width: 3.75rem; // 60px
+        width: 3.75rem;
         height: 4px;
         background: var(--color-primary);
         margin: 0.5rem auto 0;
@@ -406,6 +403,67 @@
         li {
           margin-bottom: $spacing-xs;
         }
+      }
+    }
+  }
+
+  /* ------------------------------------------------------- */
+  /* RESPONSIVE DESIGN                                      */
+  /* ------------------------------------------------------- */
+  @media screen and (max-width: 768px) {
+    .project-content {
+      gap: $spacing-sm;
+    }
+
+    .slide-preview-text {
+      font-size: $font-size-md;
+      padding: $spacing-xs $spacing-sm;
+    }
+
+    .preview-container {
+      min-height: calc(100vh - 12.5rem);
+    }
+
+    .intro-slide {
+      padding: $spacing-md;
+
+      h4 {
+        font-size: $font-size-lg;
+      }
+
+      .text-block {
+        font-size: $font-size-base;
+      }
+
+      .intro-technos li {
+        font-size: $font-size-xs;
+      }
+    }
+
+    .summary-slide {
+      padding: $spacing-md;
+      gap: $spacing-sm;
+
+      h4 {
+        font-size: $font-size-lg;
+      }
+
+      .summary-section {
+        font-size: $font-size-base;
+
+        h5 {
+          font-size: $font-size-md;
+        }
+      }
+    }
+
+    .double-image-slide {
+      flex-direction: column;
+      align-items: center;
+      gap: $spacing-md;
+
+      .double-image-card {
+        max-width: 100%;
       }
     }
   }

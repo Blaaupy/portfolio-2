@@ -20,8 +20,9 @@
     text-align: center;
 
     h1 {
-      font-size: $font-size-hero; // Use font-size variable
+      font-size: $font-size-hero; // Taille de base
       color: var(--color-primary);
+      margin-bottom: $spacing-sm; // Marge de base
     }
 
     .main-desc {
@@ -48,4 +49,21 @@
   }
 }
 
-// I've removed the unused `.projects-intro` and `.projects-list` blocks as they weren't in your JSX.
+@media screen and (max-width: 768px) {
+  .projects-section {
+    .main-text {
+      h1 {
+        font-size: $font-size-xl; // Titre plus petit
+        margin-bottom: $spacing-xs; // Mangle réduite
+      }
+
+      .main-desc {
+        font-size: $font-size-xs; // Description plus petite
+      }
+    }
+
+    .projects-container {
+      gap: $spacing-lg; // Moins d'espace entre les cartes
+    }
+  }
+}
