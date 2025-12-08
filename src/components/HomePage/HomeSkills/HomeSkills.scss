@@ -5,36 +5,30 @@
   text-align: center;
 
   h2 {
-    font-size: vars.$font-size-section-title; 
-    margin-bottom: vars.$spacing-lg;
+    font-size: vars.$font-size-section-title;
+    // --- MARGE DE BASE POUR GRANDS ÉCRANS ---
+    margin-bottom: vars.$spacing-lg; // 32px
     color: var(--color-primary);
   }
 
   .skills-list {
-    // Le conteneur qui masque le dépassement
     position: relative;
     width: 100%;
-    overflow: hidden; // Très important pour cacher ce qui défile
-    border-radius: 8px;
-    height: 80px;
+    overflow: hidden;
+    border-radius: vars.$radius-md; 
+    height: 80px; 
     display: flex;
     align-items: center;
     
-    // On ajoute les bordures au conteneur parent pour qu'il encadre l'animation
     border-right: 4px solid var(--color-primary);
     border-left: 4px solid var(--color-primary);
 
     .inner {
-      // Le conteneur qui va défiler. Sa largeur sera automatiquement celle de son contenu.
       display: flex;
       gap: vars.$spacing-sm;
-      
-      
-      // L'animation clé : on déplace de 50% pour masquer la première copie et révéler la seconde.
       animation: loop 20s linear infinite;
     }
     
-    // On cible les <a> pour le style, pas les <div> parentes
     .skill-tag {
       a {
         display: flex;
@@ -55,7 +49,7 @@
         }
 
         &:hover {
-          box-shadow: 0 4px 15px rgba(var(--color-primary-rgb), 0.5);
+          box-shadow: var(--shadow-lg); 
         }
       }
     }
@@ -69,13 +63,38 @@
   }
 }
 
+// --- Adaptation pour les tablettes et mobiles ---
+@media screen and (max-width: 768px) {
+  .home-skills {
+    h2 {
+      font-size: vars.$font-size-xl;
+      // --- MARGE RÉDUITE POUR MOBILE ---
+      margin-bottom: vars.$spacing-md; // 24px (réduit)
+    }
+
+    .skills-list {
+      height: 60px;
+
+      .skill-tag {
+        a {
+          width: 50px;
+          height: 50px;
+
+          .skill-icon {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @keyframes loop {
   0% {
-    transform: translateX(0); // Position de départ
+    transform: translateX(0);
   }
   100% {
-    // On translate de -50%, ce qui correspond exactement à la largeur de la première liste d'icônes.
-    // La seconde liste prend la place de la première, créant une boucle invisible.
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
   }
 }

@@ -2,16 +2,16 @@
 
 .home-hero {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; 
   align-items: center;
   justify-content: space-between;
   gap: vars.$spacing-lg;
 
   .home-section-content {
+    min-width: 300px; 
     max-width: 600px;
 
-    h1 {
-      // Use our new, larger font size for the hero title
+    .hero-title {
       font-size: vars.$font-size-hero; 
       span {
         color: var(--color-primary);
@@ -19,9 +19,10 @@
     }
 
     p {
-      margin: vars.$spacing-sm 0 vars.$spacing-lg;
+      // --- MARGE DE BASE POUR GRANDS ÉCRANS ---
+      margin: vars.$spacing-sm 0 vars.$spacing-lg; // 8px 0 32px
       font-size: vars.$font-size-md;
-      line-height: 1.6;
+      line-height: vars.$line-height-relaxed;
     }
 
     .home-section-buttons {
@@ -29,7 +30,6 @@
       flex-wrap: wrap;
       gap: vars.$spacing-sm;
 
-      // Override the global button padding specifically for hero buttons
       .btn {
         padding: vars.$btn-padding-hero;
       }
@@ -37,16 +37,74 @@
   }
 
   .home-hero-image {
-    text-align: center;
-    min-width: 280px;
+    min-width: 250px; 
     max-width: 300px; 
     
     img {
-      // Set a specific max-width to restore the original size
       max-width: 100%;
-      height: auto; // Maintain aspect ratio
+      height: auto;
       border-radius: vars.$radius-lg;
-      box-shadow: 0 4px 10px var(--color-shadow);
+      box-shadow: var(--shadow-md);
+      object-fit: scale-down;
+    }
+  }
+}
+
+// --- Breakpoint pour tablettes et grands mobiles ---
+@media screen and (max-width: 768px) {
+  .home-hero {
+    flex-direction: column;
+    align-items: center;
+
+    .home-section-content {
+      text-align: center;
+      min-width: auto;
+      max-width: 100%;
+      
+      .hero-title {
+        font-size: vars.$font-size-xl;
+      }
+
+      p {
+        // --- MARGE RÉDUITE POUR MOBILE ---
+        margin: vars.$spacing-xs 0 vars.$spacing-md; // 8px 0 24px (réduit)
+        font-size: vars.$font-size-base;
+      }
+    }
+
+    .home-section-buttons {
+      justify-content: center;
+    }
+
+    .home-hero-image {
+      min-width: 200px;
+      max-width: 280px;
+      margin-top: vars.$spacing-md;
+    }
+  }
+}
+
+// --- Breakpoint pour les très petits mobiles ---
+@media screen and (max-width: 480px) {
+  .home-hero {
+    .home-section-content {
+      .home-section-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 433px) {
+  .home-hero {
+    .home-section-content {
+      .hero-title {
+        font-size: vars.$font-size-lg;
+      }
     }
   }
 }

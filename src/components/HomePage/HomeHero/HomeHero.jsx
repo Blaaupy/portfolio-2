@@ -8,7 +8,7 @@ export default function HomeHero({ texts, downloadCV }) {
   return (
     <section className="home-hero">
       <div className="home-section-content">
-        <h1>
+        <h1 className="hero-title">
           {texts.home.greeting} <span>Blaaup</span> 👋
         </h1>
         <p>{texts.home.intro}</p>

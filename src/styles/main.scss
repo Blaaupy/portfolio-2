@@ -82,3 +82,27 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .page-container {
+    padding: vars.$spacing-lg vars.$spacing-sm;
+  }
+}
+
+// --- Styles de base pour la typographie ---
+h1, h2, h3, h4, h5, h6 {
+  // On utilise la variable pour la graisse
+  font-weight: vars.$font-weight-bold; 
+  // On utilise la variable pour la hauteur de ligne
+  line-height: vars.$line-height-tight;
+  color: var(--color-text);
+  margin-top: 0;
+  margin-bottom: vars.$spacing-md;
+}
+
+h1 { font-size: vars.$font-size-xl; }
+h2 { font-size: vars.$font-size-lg; }
+h3 { font-size: vars.$font-size-md; }
+h4 { font-size: vars.$font-size-base; }
+h5 { font-size: vars.$font-size-sm; }
+h6 { font-size: vars.$font-size-xs; }

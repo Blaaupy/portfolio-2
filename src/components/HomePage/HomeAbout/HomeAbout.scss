@@ -5,31 +5,30 @@
   width: 100%;
   padding: vars.$spacing-sm vars.$spacing-lg;
   background-color: var(--color-background);
-  // Use the secondary color for a nice green border that works with the theme
   border: 1px solid var(--color-secondary); 
   border-radius: vars.$radius-lg;
-  box-shadow: 0 6px 20px var(--color-shadow);
+  box-shadow: var(--shadow-lg); 
   overflow: hidden;
   text-align: center;
 
   h2 {
     font-family: "Merriweather", serif;
-    // Use our new, larger font size for section titles
     font-size: vars.$font-size-section-title;
-    margin-bottom: vars.$spacing-md;
+    // --- MARGE DE BASE POUR GRANDS ÉCRANS ---
+    margin-bottom: vars.$spacing-md; // 24px
     color: var(--color-primary);
   }
 
   p {
     font-size: vars.$font-size-md;
-    line-height: 1.8;
+    line-height: vars.$line-height-relaxed; 
     color: var(--color-text);
     max-width: 800px;
-    margin: 0 auto vars.$spacing-xl;
+    // --- MARGE DE BASE POUR GRANDS ÉCRANS ---
+    margin: 0 auto vars.$spacing-xl; // 0 auto 48px
   }
 
-  // The .btn styles are handled globally in main.scss
-  // The animation is a nice touch, let's keep it.
+  // Animation
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease-out forwards;
@@ -39,6 +38,38 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+}
+
+// --- Adaptation pour les tablettes et grands mobiles ---
+@media screen and (max-width: 768px) {
+  .home-about {
+    padding: vars.$spacing-sm vars.$spacing-md; 
+
+    h2 {
+      font-size: vars.$font-size-xl;
+      // --- MARGE RÉDUITE POUR MOBILE ---
+      margin-bottom: vars.$spacing-sm; // 16px (réduit)
+    }
+
+    p {
+      font-size: vars.$font-size-base;
+      // --- MARGE RÉDUITE POUR MOBILE ---
+      margin: 0 auto vars.$spacing-lg; // 0 auto 32px (réduit)
+    }
+  }
+}
+
+// --- Adaptation pour les petits mobiles ---
+@media screen and (max-width: 433px) {
+  .home-about {
+    h2 {
+      font-size: vars.$font-size-lg;
+    }
+
+    p {
+      font-size: vars.$font-size-sm;
     }
   }
 }
