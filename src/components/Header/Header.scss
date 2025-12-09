@@ -111,7 +111,7 @@ header {
 }
 
 .current-page {
-  color: inherit; // Hérite de la couleur de .mobile-nav-control (y compris au survol)
+  color: var(--color-text); // Hérite de la couleur de .mobile-nav-control (y compris au survol)
   font-size: vars.$font-size-base;
   pointer-events: none; // Empêche le span de déclencher des événements de souris indésirables
 }
