@@ -1,9 +1,11 @@
+// src/pages/Contact/Contact.scss
 @use "../../styles/variables" as *;
 
 .contact-page {
   width: 100%;
   max-width: $container-max-width;
   margin: 0 auto;
+  // --- MARGE DE BASE POUR GRANDS ÉCRANS ---
   padding: $spacing-xl 0;
   display: flex;
   flex-direction: column;
@@ -11,10 +13,10 @@
   gap: $spacing-xl;
 
   /* --- Ajout d'un fond subtil --- */
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); // Un pattern simple
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
   background-position: center center;
-  
+
   .fade-up {
     opacity: 0;
     transform: translateY(30px);
@@ -30,6 +32,7 @@
     text-align: center;
 
     h1 {
+      // --- TAILLE DE BASE POUR GRANDS ÉCRANS ---
       font-size: $font-size-section-title;
       color: var(--color-primary);
       margin-bottom: $spacing-sm;
@@ -39,6 +42,7 @@
       max-width: 43.75rem; // 700px
       margin: 0 auto;
       color: var(--color-text);
+      // --- TAILLE DE BASE POUR GRANDS ÉCRANS ---
       font-size: $font-size-md;
       line-height: 1.6;
     }
@@ -66,7 +70,6 @@
     width: 100%;
     max-width: 40rem; // 640px
 
-    /* --- Style pour les labels flottants --- */
     .input-group {
       position: relative;
       width: 100%;
@@ -75,9 +78,11 @@
     input,
     textarea {
       width: 100%;
+      // --- PADDING DE BASE POUR GRANDS ÉCRANS ---
       padding: $spacing-sm $spacing-md;
       border-radius: $radius-sm;
       border: 1px solid var(--color-primary);
+      // --- TAILLE DE BASE POUR GRANDS ÉCRANS ---
       font-size: $font-size-base;
       color: var(--color-text);
       background: var(--color-background);
@@ -95,6 +100,7 @@
         left: $spacing-md;
         top: 18px; // Ajuster pour centrer verticalement
         color: var(--color-text);
+        // --- TAILLE DE BASE POUR GRANDS ÉCRANS ---
         font-size: $font-size-base;
         pointer-events: none;
         transition: all $transition-base;
@@ -112,11 +118,13 @@
     }
 
     .btn {
+      // --- PADDING DE BASE POUR GRANDS ÉCRANS ---
       padding: $btn-padding-hero;
       border-radius: $radius-md;
       border: 2px solid var(--color-primary);
       background: transparent;
       color: var(--color-primary);
+      // --- TAILLE DE BASE POUR GRANDS ÉCRANS ---
       font-size: $font-size-md;
       font-weight: 600;
       cursor: pointer;
@@ -153,10 +161,12 @@
 
   .contact-info {
     text-align: center;
+    // --- TAILLE DE BASE POUR GRANDS ÉCRANS ---
     font-size: $font-size-md;
     max-width: 40rem; // 640px
 
     h3 {
+      // --- TAILLE DE BASE POUR GRANDS ÉCRANS ---
       font-size: $font-size-lg;
       color: var(--color-primary);
       margin-bottom: $spacing-sm;
@@ -180,16 +190,19 @@
     .social-links {
       display: flex;
       justify-content: center;
+      // --- ESPACEMENT DE BASE POUR GRANDS ÉCRANS ---
       gap: $spacing-md;
       margin-top: $spacing-md;
 
       a {
-        display: flex; // Pour centrer l'icône
+        display: flex;
         align-items: center;
         justify-content: center;
+        // --- TAILLE DE BASE POUR GRANDS ÉCRANS ---
         width: 40px;
         height: 40px;
         color: var(--color-primary);
+        // --- TAILLE DE BASE POUR GRANDS ÉCRANS ---
         font-size: 1.2rem; // Taille des icônes
         font-weight: 500;
         text-decoration: none;
@@ -202,6 +215,125 @@
           color: var(--color-background);
           transform: translateY(-2px);
         }
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------- */
+/* Adaptation pour tablettes et grands mobiles (768px)     */
+/* ------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .contact-page {
+    // --- MARGE RÉDUITE POUR MOBILE ---
+    padding: $spacing-lg 0;
+    gap: $spacing-lg;
+  }
+
+  .contact-intro {
+    h1 {
+      // --- TAILLE RÉDUITE POUR MOBILE ---
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-xs;
+    }
+
+    p {
+      // --- TAILLE RÉDUITE POUR MOBILE ---
+      font-size: $font-size-base;
+    }
+  }
+
+  .contact-form {
+    input,
+    textarea {
+      // --- TAILLE RÉDUITE POUR MOBILE ---
+      font-size: $font-size-sm;
+      // --- PADDING RÉDUIT POUR MOBILE ---
+      padding: $spacing-xs $spacing-sm;
+
+      & ~ label {
+        font-size: $font-size-sm;
+      }
+    }
+
+    .btn {
+      // --- TAILLE RÉDUITE POUR MOBILE ---
+      font-size: $font-size-base;
+    }
+  }
+
+  .contact-info {
+    // --- TAILLE RÉDUITE POUR MOBILE ---
+    font-size: $font-size-base;
+
+    h3 {
+      // --- TAILLE RÉDUITE POUR MOBILE ---
+      font-size: $font-size-md;
+    }
+
+    .social-links {
+      // --- ESPACEMENT RÉDUIT POUR MOBILE ---
+      gap: $spacing-sm;
+
+      a {
+        // --- TAILLE RÉDUITE POUR MOBILE ---
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------- */
+/* Adaptation pour les très petits mobiles (480px)        */
+/* ------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+  .contact-page {
+    // --- MARGE RÉDUITE POUR PETITS MOBILES ---
+    padding: $spacing-md 0;
+    gap: $spacing-md;
+  }
+
+  .contact-intro {
+    h1 {
+      // --- TAILLE RÉDUITE POUR PETITS MOBILES ---
+      font-size: $font-size-lg;
+    }
+
+    p {
+      // --- TAILLE RÉDUITE POUR PETITS MOBILES ---
+      font-size: $font-size-sm;
+    }
+  }
+
+  .contact-form {
+    .btn {
+      // --- BOUTON PLEINE LARGEUR SUR PETIT MOBILE ---
+      width: 100%;
+      // --- TAILLE RÉDUITE POUR PETITS MOBILES ---
+      font-size: $font-size-sm;
+    }
+  }
+
+  .contact-info {
+    // --- TAILLE RÉDUITE POUR PETITS MOBILES ---
+    font-size: $font-size-sm;
+
+    h3 {
+      // --- TAILLE RÉDUITE POUR PETITS MOBILES ---
+      font-size: $font-size-base;
+    }
+
+    .social-links {
+      // --- ESPACEMENT RÉDUIT POUR PETITS MOBILES ---
+      gap: $spacing-sm;
+
+      a {
+        // --- TAILLE RÉDUITE POUR PETITS MOBILES ---
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
       }
     }
   }

@@ -1,69 +1,112 @@
-// Use the variables file without a namespace to access them directly (e.g., $spacing-md)
+// src/pages/Projects/Projects.scss
 @use "../../styles/variables" as *;
 
 .projects-section {
   display: flex;
   flex-direction: column;
-  align-items: center; // Center the content horizontally
+  align-items: center;
   width: 100%;
   max-width: 75rem;
-  margin: 0 auto; // Center the section itself
-  padding: $spacing-xl 0; // Use spacing variable for vertical padding
-  gap: $spacing-xl; // Use spacing variable for gap
+  margin: 0 auto;
+  // --- MARGE DE BASE POUR GRANDS ÉCRANS ---
+  padding: $spacing-xl 0;
+  gap: $spacing-xl;
   color: var(--color-text);
 
   .main-text {
     display: flex;
     flex-direction: column;
-    align-items: center; // Center text
-    gap: $spacing-sm; // Use spacing variable
+    align-items: center;
+    gap: $spacing-sm;
     text-align: center;
 
     h1 {
-      font-size: $font-size-hero; // Taille de base
+      // --- TAILLE DE POLICE FLUIDE POUR GRANDS ÉCRANS ---
+      font-size: clamp(2rem, 5vw, $font-size-hero);
       color: var(--color-primary);
-      margin-bottom: $spacing-sm; // Marge de base
+      // --- MARGE DE BASE POUR GRANDS ÉCRANS ---
+      margin-bottom: $spacing-sm;
     }
 
     .main-desc {
       max-width: 60rem;
-      font-size: $font-size-sm; // Small, footnote-like size
-      font-style: italic; // Italic to signify it's a note
-      opacity: 0.8; // Slightly faded text
+      // --- TAILLE DE POLICE DE BASE POUR GRANDS ÉCRANS ---
+      font-size: $font-size-sm;
+      font-style: italic;
+      opacity: 0.8;
       line-height: 1.6;
       text-align: center;
 
-      // The subtle background box
       padding: $spacing-sm $spacing-md;
       border-radius: $radius-md;
-      background-color: rgba(var(--color-primary-rgb), 0.05); // A very light green background
-      border: 1px solid rgba(var(--color-primary-rgb), 0.1); // A soft, matching border
+      background-color: rgba(var(--color-primary-rgb), 0.05);
+      border: 1px solid rgba(var(--color-primary-rgb), 0.1);
     }
   }
 
   .projects-container {
     display: flex;
     flex-direction: column;
-    gap: $spacing-xl; // Use spacing variable for consistent gap between cards
+    // --- ESPACEMENT DE BASE POUR GRANDS ÉCRANS ---
+    gap: $spacing-xl;
     width: 100%;
   }
 }
 
+/* ------------------------------------------------------- */
+/* Adaptation pour tablettes et grands mobiles (768px)     */
+/* ------------------------------------------------------- */
 @media screen and (max-width: 768px) {
   .projects-section {
+    // --- MARGE RÉDUITE POUR MOBILE ---
+    padding: $spacing-lg 0;
+    gap: $spacing-lg;
+
     .main-text {
       h1 {
-        font-size: $font-size-xl; // Titre plus petit
-        margin-bottom: $spacing-xs; // Mangle réduite
+        // --- TAILLE DE POLICE RÉDUITE POUR MOBILE ---
+        font-size: $font-size-xl;
+        // --- MARGE RÉDUITE POUR MOBILE ---
+        margin-bottom: $spacing-xs;
       }
 
       .main-desc {
-        font-size: $font-size-xs; // Description plus petite
+        // --- TAILLE DE POLICE RÉDUITE POUR MOBILE ---
+        font-size: $font-size-xs;
       }
     }
 
     .projects-container {
-      gap: $spacing-lg; // Moins d'espace entre les cartes
+      // --- ESPACEMENT RÉDUIT POUR MOBILE ---
+      gap: $spacing-lg;
+    }
+  }
+}
+
+/* ------------------------------------------------------- */
+/* Adaptation pour les très petits mobiles (425px)        */
+/* ------------------------------------------------------- */
+@media screen and (max-width: 425px) {
+  .projects-section {
+    // --- MARGE RÉDUITE POUR PETITS MOBILES ---
+    padding: $spacing-md 0;
+    gap: $spacing-md;
+
+    .main-text {
+      h1 {
+        // --- TAILLE DE POLICE RÉDUITE POUR PETITS MOBILES ---
+        font-size: $font-size-lg;
+      }
+
+      .main-desc {
+        // --- TAILLE DE POLICE RÉDUITE POUR PETITS MOBILES ---
+        font-size: $font-size-xs;
+      }
+    }
+
+    .projects-container {
+      // --- ESPACEMENT RÉDUIT POUR PETITS MOBILES ---
+      gap: $spacing-md;
     }
   }
 }
