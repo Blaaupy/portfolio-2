@@ -82,7 +82,7 @@
 
   /* --- STYLE POUR LE COMPTEUR QUI S'AFFICHE --- */
   .nav-counter {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     
