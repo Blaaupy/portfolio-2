@@ -7,6 +7,10 @@
   justify-content: center;
   gap: $spacing-xs;
 
+  .nav-counter{
+    display: none;
+  }
+
   .nav-arrow,
   .nav-dots button {
     height: 2rem;
