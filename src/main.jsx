@@ -8,7 +8,7 @@ import "./styles/main.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/portfolio-2">
+    <BrowserRouter basename="/portfolio/">
       <App />
     </BrowserRouter>
   </React.StrictMode>
