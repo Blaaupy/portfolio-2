@@ -68,7 +68,14 @@
     "successMsg": "Merci, message envoyé !",
     "infoTitle": "Mes coordonnées",
     "emailLabel": "Email",
-    "phoneLabel": "Téléphone"
+    "phoneLabel": "Téléphone",
+    "overlay": {
+      "title": "Contactez-moi",
+      "emailLabel": "Email :",
+      "phoneLabel": "Téléphone :",
+      "relocationLabel": "Ouvert à la relocation",
+      "close": "Fermer"
+    }
   },
   "project": {
     "title": "Mes Projets",

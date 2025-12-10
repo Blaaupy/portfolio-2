@@ -5,7 +5,7 @@ import { useContext, useEffect, useState, useRef } from "react";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 import LanguageSelector from "../LanguageSelector/LanguageSelector"; 
 import { LanguageContext } from "../../context/LanguageContext";
-import { Menu, X, Settings } from "lucide-react";
+import { Menu, X, Settings, Mail, Phone } from "lucide-react";
 import "./Header.scss";
 
 export default function Header() {
@@ -14,9 +14,10 @@ export default function Header() {
 
   const [isSettingsMenuOpen, setIsSettingsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContactOverlayOpen, setIsContactOverlayOpen] = useState(false);
 
-  // Référence pour le panneau des paramètres
   const settingsPanelRef = useRef(null);
+  const contactOverlayRef = useRef(null);
 
   const toggleSettingsMenu = () => {
     setIsSettingsMenuOpen(!isSettingsMenuOpen);
@@ -26,18 +27,19 @@ export default function Header() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Fermer les menus à chaque changement de page
+  const toggleContactOverlay = (e) => {
+    e.preventDefault();
+    setIsContactOverlayOpen(!isContactOverlayOpen);
+  };
+
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsSettingsMenuOpen(false);
+    setIsContactOverlayOpen(false);
   }, [location]);
 
-  // --- CORRECTION : useEffect pour gérer le clic à l'extérieur ---
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // On vérifie deux conditions :
-      // 1. Le clic est en dehors du panneau de paramètres.
-      // 2. Le clic ne provient PAS du bouton des paramètres (ni de l'un de ses enfants, comme l'icône).
       if (
         settingsPanelRef.current &&
         !settingsPanelRef.current.contains(event.target) &&
@@ -47,47 +49,54 @@ export default function Header() {
       }
     };
 
-    // On ajoute l'écouteur d'événements UNIQUEMENT si le menu est ouvert
     if (isSettingsMenuOpen) {
       document.addEventListener('mousedown', handleClickOutside);
     }
 
-    // Fonction de nettoyage : on retire l'écouteur pour éviter les fuites de mémoire
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isSettingsMenuOpen]); // Le hook se ré-exécute si l'état du menu change
+  }, [isSettingsMenuOpen]);
 
-  // Fonction pour obtenir le nom de la page actuelle
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        contactOverlayRef.current &&
+        !contactOverlayRef.current.contains(event.target) &&
+        !event.target.closest('.logo-link')
+      ) {
+        setIsContactOverlayOpen(false);
+      }
+    };
+
+    if (isContactOverlayOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isContactOverlayOpen]);
+
   const getCurrentPageName = () => {
-    // On extrait le dernier segment de l'URL.
-    // ex: "/portfolio-2/about" -> "about"
-    // ex: "/portfolio-2/" -> ""
     const pathSegment = location.pathname.split('/').pop();
 
     switch (pathSegment) {
-      case '':
-        // Si le segment est vide, c'est la page d'accueil
-        return texts.nav.home;
-      case 'about':
-        return texts.nav.about;
-      case 'projects':
-        return texts.nav.projects;
-      case 'contact':
-        return texts.nav.contact;
-      default:
-        // Par défaut, on retourne "Accueil" si la route n'est pas reconnue
-        return texts.nav.home;
+      case '': return texts.nav.home;
+      case 'about': return texts.nav.about;
+      case 'projects': return texts.nav.projects;
+      case 'contact': return texts.nav.contact;
+      default: return texts.nav.home;
     }
   };
 
   return (
     <header>
       <div className="header-left">
-        <Link to="/">
-          <p>Blaaup</p>
-        </Link>
-      </div>
+          <button onClick={toggleContactOverlay} className="logo-link" aria-label="Ouvrir les informations de contact">
+            <img src={`${import.meta.env.BASE_URL}images/Logo.png`} alt="Blaaup Logo" className="logo-img" />
+          </button>
+        </div>
 
       <div className="header-center">
         <nav className="nav-desktop">
@@ -115,7 +124,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* --- Les Contrôles --- */}
       <div className="header-right">
         <button
           className="settings-button"
@@ -126,7 +134,6 @@ export default function Header() {
         </button>
       </div>
       
-      {/* Le panneau est un enfant direct du <header> pour un bon positionnement */}
       {isSettingsMenuOpen && (
         <div className="settings-panel" ref={settingsPanelRef}>
           <ThemeSwitch />
@@ -134,7 +141,26 @@ export default function Header() {
         </div>
       )}
 
-      {/* --- Menu Mobile --- */}
+      {/* --- MODIFICATION : Le panneau de contact est maintenant un "panel" comme les settings --- */}
+      {isContactOverlayOpen && (
+        <div className="contact-panel" ref={contactOverlayRef}>
+          <h3>{texts.contact.overlay.title}</h3>
+          <div className="contact-info">
+            <p>
+              <Mail size={16} />
+              <span>blaaup@example.com</span>
+            </p>
+            <p>
+              <Phone size={16} />
+              <span>+33 0 00 00 00 00</span>
+            </p>
+            <p>
+              <span>{texts.contact.overlay.relocationLabel}</span>
+            </p>
+          </div>
+        </div>
+      )}
+
       <div className={`mobile-nav-menu ${isMobileMenuOpen ? "mobile-nav-menu--open" : ""}`}>
         <nav className="mobile-nav">
           <NavLink to="/" end className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
