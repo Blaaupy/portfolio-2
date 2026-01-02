@@ -10,7 +10,7 @@ export default function About() {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/cv_blaaup.pdf";
+    link.href = "files/CV_LAURENT_Baptiste_15_12_2025.pdf";
     link.download = "CV_Blaaup.pdf";
     link.click();
   };

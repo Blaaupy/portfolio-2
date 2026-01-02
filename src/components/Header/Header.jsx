@@ -148,11 +148,11 @@ export default function Header() {
           <div className="contact-info">
             <p>
               <Mail size={16} />
-              <span>blaaup@example.com</span>
+              <span>laurent.baptiste0025@gmail.com</span>
             </p>
             <p>
               <Phone size={16} />
-              <span>+33 0 00 00 00 00</span>
+              <span>+33 6 07 69 05 95</span>
             </p>
             <p>
               <span>{texts.contact.overlay.relocationLabel}</span>

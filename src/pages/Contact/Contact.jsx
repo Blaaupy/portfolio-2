@@ -103,11 +103,11 @@ export default function Contact() {
           <h3>{texts.contact.infoTitle}</h3>
           <p>
             {texts.contact.emailLabel} :{" "}
-            <a href="mailto:blaaup@example.com">blaaup@example.com</a>
+            <a>laurent.baptiste0025@gmail.com</a>
           </p>
           <p>
             {texts.contact.phoneLabel} :{" "}
-            <a href="tel:+33000000000">+33 0 00 00 00 00</a>
+            <a href="tel:+33607690595">+33 6 07 69 05 95</a>
           </p>
           
           {/* --- Icônes Sociales --- */}
